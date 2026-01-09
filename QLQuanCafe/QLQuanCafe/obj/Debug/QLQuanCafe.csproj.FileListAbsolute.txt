@@ -1,0 +1,14 @@
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\bin\Debug\QLQuanCafe.exe.config
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\bin\Debug\QLQuanCafe.exe
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\bin\Debug\QLQuanCafe.pdb
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.csproj.AssemblyReference.cache
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.Properties.Resources.resources
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.csproj.GenerateResource.cache
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.csproj.CoreCompileInputs.cache
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.exe
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.pdb
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.exe.config
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.formLogin.resources
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.fTableManager.resources
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.formAccountProfile.resources
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.fAdmin.resources
