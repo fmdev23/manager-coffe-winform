@@ -385,6 +385,7 @@
             this.cbTypeAccount.Name = "cbTypeAccount";
             this.cbTypeAccount.Size = new System.Drawing.Size(169, 33);
             this.cbTypeAccount.TabIndex = 1;
+            this.cbTypeAccount.SelectedValueChanged += new System.EventHandler(this.AccountField_Changed);
             // 
             // label14
             // 
@@ -426,6 +427,7 @@
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(170, 34);
             this.txtDisplayName.TabIndex = 1;
+            this.txtDisplayName.TextChanged += new System.EventHandler(this.AccountField_Changed);
             // 
             // panel26
             // 
@@ -445,6 +447,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(171, 34);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextChanged += new System.EventHandler(this.AccountField_Changed);
             // 
             // label15
             // 
@@ -1258,6 +1261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1237, 697);
             this.Controls.Add(this.tbFoodCategory);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

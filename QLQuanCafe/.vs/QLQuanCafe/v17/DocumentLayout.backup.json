@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\qlquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|solutionrelative:qlquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|d:\\nctu\\dotnet\\qlquancafe\\qlquancafe\\qlquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|solutionrelative:qlquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|d:\\nctu\\dotnet\\qlquancafe\\qlquancafe\\qlquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|solutionrelative:qlquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 205,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +26,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "fTableManager.cs",
               "DocumentMoniker": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\QLQuanCafe\\fTableManager.cs",
               "RelativeDocumentMoniker": "QLQuanCafe\\fTableManager.cs",
               "ToolTip": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\QLQuanCafe\\fTableManager.cs",
               "RelativeToolTip": "QLQuanCafe\\fTableManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA4wGAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADoCAAAAAAAAAAAiwE8CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T01:08:55.553Z",
+              "WhenOpened": "2026-01-10T13:54:10.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "fTableManager.cs [Design]",
               "DocumentMoniker": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\QLQuanCafe\\fTableManager.cs",
               "RelativeDocumentMoniker": "QLQuanCafe\\fTableManager.cs",
               "ToolTip": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\QLQuanCafe\\fTableManager.cs [Design]",
               "RelativeToolTip": "QLQuanCafe\\fTableManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T03:42:00.676Z",
+              "WhenOpened": "2026-01-10T13:54:07.512Z",
               "EditorCaption": " [Design]"
             }
           ]
