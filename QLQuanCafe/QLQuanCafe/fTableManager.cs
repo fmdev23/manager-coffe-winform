@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Guna.UI2.WinForms;
 using System.Windows.Forms;
 
 namespace QLQuanCafe
@@ -47,18 +48,18 @@ namespace QLQuanCafe
             lsvBill.Columns.Add("Đơn giá", 100);
             lsvBill.Columns.Add("Thành tiền", 120);
         }
-        void BtnTable_Click(object sender, EventArgs e) // chọn bàn
+        void BtnTable_Guna_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
+            var btn = sender as Guna2GradientButton;
             if (btn == null || btn.Tag == null) return;
 
             currentTableID = (int)btn.Tag;
 
-            foreach (Button b in flpTable.Controls.OfType<Button>())
-                b.FlatAppearance.BorderSize = 0;
+            foreach (Guna2GradientButton b in flpTable.Controls.OfType<Guna2GradientButton>())
+                b.BorderThickness = 0;
 
-            btn.FlatAppearance.BorderSize = 2;
-            btn.FlatAppearance.BorderColor = Color.White;
+            btn.BorderThickness = 2;
+            btn.BorderColor = Color.White;
 
             LoadBillByTable(currentTableID);
             LoadEmptyTableToSwitch();
@@ -228,68 +229,90 @@ namespace QLQuanCafe
             }
         }
 
-        void LoadTable() // load bàn
+        void LoadTable()
         {
             flpTable.Controls.Clear();
 
-            string query = @"SELECT ft.tableID, ft.tableName,
-                                CASE 
-                                    WHEN EXISTS (
-                                        SELECT 1 
-                                        FROM Bill b 
-                                        WHERE b.IDTable = ft.tableID AND b.billStatus = 1
-                                    )
-                                    THEN 1 ELSE 0
-                                END AS IsOccupied,
-                                ISNULL((
-                                    SELECT SUM(bi.Quantity * f.foodPrice)
-                                    FROM Bill b
-                                    JOIN BillInfo bi ON b.billID = bi.IDBill
-                                    JOIN Food f ON bi.IDFood = f.foodID
-                                    WHERE b.IDTable = ft.tableID AND b.billStatus = 1
-                                ), 0) AS TotalAmount
-                            FROM FoodTable ft
-                        ";
+            string query = @"
+    SELECT ft.tableID, ft.tableName,
+        CASE 
+            WHEN EXISTS (
+                SELECT 1 FROM Bill b 
+                WHERE b.IDTable = ft.tableID AND b.billStatus = 1
+            ) THEN 1 ELSE 0
+        END AS IsOccupied,
+        ISNULL((
+            SELECT SUM(bi.Quantity * f.foodPrice)
+            FROM Bill b
+            JOIN BillInfo bi ON b.billID = bi.IDBill
+            JOIN Food f ON bi.IDFood = f.foodID
+            WHERE b.IDTable = ft.tableID AND b.billStatus = 1
+        ), 0) AS TotalAmount
+    FROM FoodTable ft";
 
-            using (SqlConnection connection = new SqlConnection(connection_string_sql))
+            using (SqlConnection conn = new SqlConnection(connection_string_sql))
             {
-                SqlCommand cmd = new SqlCommand(query, connection);
-                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                SqlDataReader rd = cmd.ExecuteReader();
 
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                while (rd.Read())
                 {
-                    int tableID = (int)reader["tableID"];
-                    string tableName = reader["tableName"].ToString();
-                    bool isOccupied = Convert.ToBoolean(reader["IsOccupied"]);
-                    decimal total = Convert.ToDecimal(reader["TotalAmount"]);
+                    int tableID = (int)rd["tableID"];
+                    string tableName = rd["tableName"].ToString();
+                    bool isOccupied = Convert.ToBoolean(rd["IsOccupied"]);
+                    decimal total = Convert.ToDecimal(rd["TotalAmount"]);
 
-                    Button btn = new Button();
-                    btn.Width = 100;
+                    Guna2GradientButton btn = new Guna2GradientButton();
+
+                    btn.Parent = flpTable;
+                    btn.HoverState.Parent = btn;
+                    btn.DisabledState.Parent = btn;
+                    btn.CheckedState.Parent = btn;
+
+                    btn.Enabled = true;
+                    btn.Visible = true;
+                    btn.Cursor = Cursors.Hand;
+
+
+                    btn.Width = 120;
                     btn.Height = 90;
                     btn.Margin = new Padding(10);
                     btn.Tag = tableID;
-                    btn.Click += BtnTable_Click;
+
+                    btn.BorderRadius = 14;
+                    btn.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                    btn.TextAlign = HorizontalAlignment.Center;
+
+                    //btn.ShadowDecoration.Enabled = true;
+                    //btn.ShadowDecoration.Depth = 6;
+                    //btn.ShadowDecoration.Color = Color.FromArgb(60, 0, 0, 0);
 
                     if (isOccupied)
                     {
-                        btn.Text = tableName + Environment.NewLine + "(Có người)" + Environment.NewLine + total.ToString("N0") + " VND";
-                        btn.BackColor = Color.LightGray;
+                        btn.Text = $"{tableName}\nCó người\n{total:N0} VND";
+
+                        btn.FillColor = Color.FromArgb(203, 213, 225); // slate
+                        btn.FillColor2 = Color.FromArgb(148, 163, 184);
+                        btn.ForeColor = Color.Black;
                     }
                     else
                     {
-                        btn.Text = tableName + Environment.NewLine + "(Trống)";
-                        btn.BackColor = Color.LightGreen;
+                        btn.Text = $"{tableName}\nTrống";
+
+                        btn.FillColor = Color.FromArgb(209, 250, 229); // xanh mint
+                        btn.FillColor2 = Color.FromArgb(167, 243, 208);
+                        btn.ForeColor = Color.Black;
                     }
 
-                    btn.FlatStyle = FlatStyle.Flat;
-                    btn.TextAlign = ContentAlignment.MiddleCenter;
+                    btn.Click += BtnTable_Guna_Click;
 
                     flpTable.Controls.Add(btn);
                 }
             }
         }
+
+
 
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e) // load món khi chọn danh mục
         {

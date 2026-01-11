@@ -12,3 +12,5 @@ D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.formLogin.r
 D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.fTableManager.resources
 D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.formAccountProfile.resources
 D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.fAdmin.resources
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\bin\Debug\Guna.UI2.dll
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.csproj.Up2Date

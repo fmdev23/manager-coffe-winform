@@ -63,9 +63,19 @@ namespace QLQuanCafe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap header {
+        internal static System.Drawing.Bitmap Black_Orange_Simple_Cloud_Service_Logo {
             get {
-                object obj = ResourceManager.GetObject("header", resourceCulture);
+                object obj = ResourceManager.GetObject("Black Orange Simple Cloud Service Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MANAGER_COFFE_SYSTEM {
+            get {
+                object obj = ResourceManager.GetObject("MANAGER COFFE SYSTEM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
