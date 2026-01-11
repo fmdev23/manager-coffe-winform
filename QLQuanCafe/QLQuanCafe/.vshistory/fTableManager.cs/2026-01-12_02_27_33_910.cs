@@ -636,6 +636,7 @@ namespace QLQuanCafe
                 cmd.ExecuteNonQuery();
             }
 
+            // === RESET UI ===
             MessageBox.Show("Thanh toán thành công!", "Hoàn tất", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             currentTableID = -1;

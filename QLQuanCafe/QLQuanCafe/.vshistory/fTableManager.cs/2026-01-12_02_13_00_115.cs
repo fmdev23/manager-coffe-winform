@@ -21,6 +21,11 @@ namespace QLQuanCafe
         int originalQuantity = 0;
         bool isEditingFood = false;
 
+        Color colorEmpty = Color.FromArgb(243, 246, 249);
+        Color colorOccupied = Color.FromArgb(229, 231, 235);
+        Color colorActive = Color.FromArgb(219, 234, 254); // xanh nhạt
+        Color colorAccent = Color.FromArgb(37, 99, 235);   // xanh đậm
+
 
         public fTableManager(string userName)
         {
@@ -636,6 +641,7 @@ namespace QLQuanCafe
                 cmd.ExecuteNonQuery();
             }
 
+            // === RESET UI ===
             MessageBox.Show("Thanh toán thành công!", "Hoàn tất", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             currentTableID = -1;
