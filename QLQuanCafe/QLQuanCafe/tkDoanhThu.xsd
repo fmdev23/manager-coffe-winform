@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="tkDoanhThu" targetNamespace="http://tempuri.org/tkDoanhThu.xsd" xmlns:mstns="http://tempuri.org/tkDoanhThu.xsd" xmlns="http://tempuri.org/tkDoanhThu.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="tkDoanhThu" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="tkDoanhThu" msprop:Generator_DataSetName="tkDoanhThu">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtDoanhThu" msprop:Generator_RowEvHandlerName="dtDoanhThuRowChangeEventHandler" msprop:Generator_RowDeletedName="dtDoanhThuRowDeleted" msprop:Generator_RowDeletingName="dtDoanhThuRowDeleting" msprop:Generator_RowEvArgName="dtDoanhThuRowChangeEvent" msprop:Generator_TablePropName="dtDoanhThu" msprop:Generator_RowChangedName="dtDoanhThuRowChanged" msprop:Generator_RowChangingName="dtDoanhThuRowChanging" msprop:Generator_TableClassName="dtDoanhThuDataTable" msprop:Generator_RowClassName="dtDoanhThuRow" msprop:Generator_TableVarName="tabledtDoanhThu" msprop:Generator_UserTableName="dtDoanhThu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BillID" msprop:Generator_ColumnPropNameInRow="BillID" msprop:Generator_ColumnPropNameInTable="BillIDColumn" msprop:Generator_ColumnVarNameInTable="columnBillID" msprop:Generator_UserColumnName="BillID" type="xs:int" minOccurs="0" />
+              <xs:element name="TableName" msprop:Generator_ColumnPropNameInRow="TableName" msprop:Generator_ColumnPropNameInTable="TableNameColumn" msprop:Generator_ColumnVarNameInTable="columnTableName" msprop:Generator_UserColumnName="TableName" type="xs:string" minOccurs="0" />
+              <xs:element name="DateCheckIn" msprop:Generator_ColumnPropNameInRow="DateCheckIn" msprop:Generator_ColumnPropNameInTable="DateCheckInColumn" msprop:Generator_ColumnVarNameInTable="columnDateCheckIn" msprop:Generator_UserColumnName="DateCheckIn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateCheckOut" msprop:Generator_ColumnPropNameInRow="DateCheckOut" msprop:Generator_ColumnPropNameInTable="DateCheckOutColumn" msprop:Generator_ColumnVarNameInTable="columnDateCheckOut" msprop:Generator_UserColumnName="DateCheckOut" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TotalAmount" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" msprop:Generator_UserColumnName="TotalAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalQuantity" msprop:Generator_ColumnPropNameInRow="TotalQuantity" msprop:Generator_ColumnPropNameInTable="TotalQuantityColumn" msprop:Generator_ColumnVarNameInTable="columnTotalQuantity" msprop:Generator_UserColumnName="TotalQuantity" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

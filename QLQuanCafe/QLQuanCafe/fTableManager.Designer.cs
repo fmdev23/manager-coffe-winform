@@ -55,11 +55,13 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2ContextMenuStrip2 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -109,7 +111,7 @@
             // 
             this.panel2.Controls.Add(this.lsvBill);
             this.panel2.Location = new System.Drawing.Point(596, 267);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(665, 332);
             this.panel2.TabIndex = 1;
@@ -119,7 +121,7 @@
             this.lsvBill.GridLines = true;
             this.lsvBill.HideSelection = false;
             this.lsvBill.Location = new System.Drawing.Point(4, 4);
-            this.lsvBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvBill.Margin = new System.Windows.Forms.Padding(4);
             this.lsvBill.Name = "lsvBill";
             this.lsvBill.Size = new System.Drawing.Size(656, 324);
             this.lsvBill.TabIndex = 0;
@@ -133,7 +135,7 @@
             this.panel3.Controls.Add(this.btnSwitchTable);
             this.panel3.Controls.Add(this.guna2GradientButton1);
             this.panel3.Location = new System.Drawing.Point(596, 607);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(665, 130);
             this.panel3.TabIndex = 2;
@@ -213,7 +215,7 @@
             this.panel4.Controls.Add(this.btnUpdateFood);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(596, 33);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(665, 226);
             this.panel4.TabIndex = 3;
@@ -261,7 +263,7 @@
             this.cbFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbFood.ItemHeight = 30;
             this.cbFood.Location = new System.Drawing.Point(179, 55);
-            this.cbFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbFood.Margin = new System.Windows.Forms.Padding(4);
             this.cbFood.Name = "cbFood";
             this.cbFood.Size = new System.Drawing.Size(307, 36);
             this.cbFood.TabIndex = 14;
@@ -287,7 +289,7 @@
             this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCategory.ItemHeight = 30;
             this.cbCategory.Location = new System.Drawing.Point(179, 4);
-            this.cbCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(307, 36);
             this.cbCategory.TabIndex = 12;
@@ -320,7 +322,7 @@
             this.btnDelFood.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnDelFood.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnDelFood.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.btnDelFood.Location = new System.Drawing.Point(511, 91);
+            this.btnDelFood.Location = new System.Drawing.Point(507, 92);
             this.btnDelFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelFood.Name = "btnDelFood";
             this.btnDelFood.Size = new System.Drawing.Size(151, 44);
@@ -343,7 +345,7 @@
             this.btnUpdateFood.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnUpdateFood.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnUpdateFood.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.btnUpdateFood.Location = new System.Drawing.Point(511, 27);
+            this.btnUpdateFood.Location = new System.Drawing.Point(507, 27);
             this.btnUpdateFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateFood.Name = "btnUpdateFood";
             this.btnUpdateFood.Size = new System.Drawing.Size(151, 44);
@@ -364,10 +366,10 @@
             // flpTable
             // 
             this.flpTable.AutoScroll = true;
-            this.flpTable.Location = new System.Drawing.Point(17, 33);
-            this.flpTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpTable.Location = new System.Drawing.Point(13, 148);
+            this.flpTable.Margin = new System.Windows.Forms.Padding(4);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(575, 704);
+            this.flpTable.Size = new System.Drawing.Size(575, 589);
             this.flpTable.TabIndex = 4;
             // 
             // guna2ContextMenuStrip1
@@ -400,6 +402,17 @@
             this.guna2ContextMenuStrip2.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ContextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::QLQuanCafe.Properties.Resources.image_removebg_preview__1_;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 37);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(574, 104);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // fTableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -411,9 +424,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin quán";
@@ -424,6 +438,7 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +470,6 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
