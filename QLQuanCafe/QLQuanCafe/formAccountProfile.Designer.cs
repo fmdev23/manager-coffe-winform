@@ -107,15 +107,15 @@
             this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserName.Location = new System.Drawing.Point(210, 191);
+            this.txtUserName.Location = new System.Drawing.Point(230, 191);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PlaceholderText = "";
             this.txtUserName.ReadOnly = true;
             this.txtUserName.SelectedText = "";
-            this.txtUserName.Size = new System.Drawing.Size(504, 59);
+            this.txtUserName.Size = new System.Drawing.Size(484, 59);
             this.txtUserName.TabIndex = 10;
             // 
             // label7
@@ -124,7 +124,7 @@
             this.label7.Location = new System.Drawing.Point(23, 327);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 59);
+            this.label7.Size = new System.Drawing.Size(199, 59);
             this.label7.TabIndex = 11;
             this.label7.Text = "Mật khẩu hiện tại";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,14 +138,15 @@
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(210, 327);
+            this.txtPassword.Location = new System.Drawing.Point(230, 327);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(504, 59);
+            this.txtPassword.Size = new System.Drawing.Size(484, 59);
             this.txtPassword.TabIndex = 12;
             // 
             // label2
@@ -168,14 +169,15 @@
             this.txtNewPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNewPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNewPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.ForeColor = System.Drawing.Color.Black;
             this.txtNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPass.Location = new System.Drawing.Point(210, 396);
+            this.txtNewPass.Location = new System.Drawing.Point(230, 396);
             this.txtNewPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.PlaceholderText = "";
             this.txtNewPass.SelectedText = "";
-            this.txtNewPass.Size = new System.Drawing.Size(504, 59);
+            this.txtNewPass.Size = new System.Drawing.Size(484, 59);
             this.txtNewPass.TabIndex = 14;
             // 
             // label5
@@ -198,14 +200,15 @@
             this.txtReEnterPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtReEnterPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtReEnterPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtReEnterPass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReEnterPass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReEnterPass.ForeColor = System.Drawing.Color.Black;
             this.txtReEnterPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtReEnterPass.Location = new System.Drawing.Point(210, 465);
+            this.txtReEnterPass.Location = new System.Drawing.Point(230, 465);
             this.txtReEnterPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtReEnterPass.Name = "txtReEnterPass";
             this.txtReEnterPass.PlaceholderText = "";
             this.txtReEnterPass.SelectedText = "";
-            this.txtReEnterPass.Size = new System.Drawing.Size(504, 59);
+            this.txtReEnterPass.Size = new System.Drawing.Size(484, 59);
             this.txtReEnterPass.TabIndex = 16;
             // 
             // label6
@@ -228,14 +231,15 @@
             this.txtDisplayName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDisplayName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDisplayName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDisplayName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplayName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplayName.ForeColor = System.Drawing.Color.Black;
             this.txtDisplayName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDisplayName.Location = new System.Drawing.Point(210, 260);
+            this.txtDisplayName.Location = new System.Drawing.Point(230, 260);
             this.txtDisplayName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.PlaceholderText = "";
             this.txtDisplayName.SelectedText = "";
-            this.txtDisplayName.Size = new System.Drawing.Size(504, 59);
+            this.txtDisplayName.Size = new System.Drawing.Size(484, 59);
             this.txtDisplayName.TabIndex = 18;
             // 
             // guna2PictureBox2
