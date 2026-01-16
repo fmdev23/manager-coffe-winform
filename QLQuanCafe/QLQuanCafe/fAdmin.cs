@@ -24,6 +24,11 @@ namespace QLQuanCafe
         string _originPassword;
         bool _originType;
 
+        // BIẾN LƯU GIÁ TRỊ BAN ĐẦU KHI CHỌN 1 TABLE
+        string _originTableName;
+        bool _originTableStatus;
+        bool _isAddingTable = false;
+
         // BIẾN LƯU TRẠNG THÁI THÊM MÓN ĂN
         string _foodImagePath = "";
         bool _isAddingFood = false;
@@ -33,6 +38,11 @@ namespace QLQuanCafe
         float _originFoodPrice;
         int _originFoodCategory;
         string _originFoodImage;
+
+        // BIẾN LƯU GIÁ TRỊ BAN ĐẦU KHI CHỌN 1 CATEGORY
+        string _originCategoryName;
+        bool _isAddingCategory = false;
+
 
         // KẾT NỐI SQL SERVER
         SqlConnection ketNoi;
@@ -50,10 +60,11 @@ namespace QLQuanCafe
             LoadTableStatus();
             LoadFoodCategory();
             LoadFood();
+            LoadGridViewCategory();
             this.rpvDoanhThu.RefreshReport();
         }
         //XU LY ACCOUNT -----------------------------------------------------------------------------
-        void LoadTypeAccount()
+        void LoadTypeAccount() // load loại tài khoản vào combobox
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Value", typeof(bool));
@@ -65,9 +76,9 @@ namespace QLQuanCafe
             cbTypeAccount.DataSource = dt;
             cbTypeAccount.DisplayMember = "Text";
             cbTypeAccount.ValueMember = "Value";
-        }       
-
-        void clearInformation()
+        }    
+        
+        void clearInformation() // xóa trắng thông tin trên account
         {
             txtUserName.ReadOnly = false;
             txtUserName.Text = "";
@@ -75,7 +86,8 @@ namespace QLQuanCafe
             txtPassword.Text = "";
             cbTypeAccount.SelectedIndex = 0;
         }
-        void AccountField_Changed(object sender, EventArgs e)
+        
+        void AccountField_Changed(object sender, EventArgs e) // theo dõi thay đổi trên form account
         {
             if (txtUserName.Text == "") return; // chưa chọn account
 
@@ -87,14 +99,21 @@ namespace QLQuanCafe
             btnEditAccount.Text = isChanged ? "Cập nhật" : "Sửa tài khoản";
         }
 
-        private void LoadGridViewAccount()
+        private void LoadGridViewAccount(string keyword = "") // load dữ liệu account từ DB lên DataGridView
         {
             string connection_string = connection_string_sql;
             ketNoi = new SqlConnection(connection_string);
-            string sql = "SELECT * FROM Account";
-            boDocGhi = new SqlDataAdapter(sql, ketNoi);
+
+            string sql = @"SELECT * FROM Account WHERE (@key = '' OR userName LIKE '%' + @key + '%' OR displayName LIKE '%' + @key + '%')";
+
+            SqlCommand cmd = new SqlCommand(sql, ketNoi);
+            cmd.Parameters.AddWithValue("@key", keyword);
+
+            boDocGhi = new SqlDataAdapter(cmd);
+            
             dsAccount = new DataSet("DSAccount");
             boDocGhi.Fill(dsAccount, "Account");
+            
             dtgvAccount.DataSource = dsAccount.Tables["Account"];
 
             //doi ten cot
@@ -102,9 +121,18 @@ namespace QLQuanCafe
             dtgvAccount.Columns["displayName"].HeaderText = "Tên hiển thị";
             dtgvAccount.Columns["PassWord"].HeaderText = "Mật khẩu";
             dtgvAccount.Columns["Type"].HeaderText = "Loại tài khoản";
-        }     
+        }
+        private void txbFindAccountName_TextChanged(object sender, EventArgs e)
+        {
+            LoadGridViewAccount(txbFindAccountName.Text.Trim());
+        }
 
-        private void dtgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnFindAccount_Click(object sender, EventArgs e)
+        {
+            LoadGridViewAccount(txbFindAccountName.Text.Trim());
+        }
+
+        private void dtgvAccount_CellClick(object sender, DataGridViewCellEventArgs e) // khi click vào 1 dòng trong datagridview account
         {
             if (e.RowIndex < 0) return;
 
@@ -125,6 +153,7 @@ namespace QLQuanCafe
             // reset nút
             btnEditAccount.Text = "Sửa tài khoản";
         }
+        
         private void btnAddAccount_Click(object sender, EventArgs e)
         {
 
@@ -315,8 +344,9 @@ namespace QLQuanCafe
             }
         }
 
+        
         //XU LY TABLE -----------------------------------------------------------------------------
-        void LoadTableStatus()
+        void LoadTableStatus() // load trạng thái bàn vào combobox
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Value", typeof(bool));
@@ -329,6 +359,32 @@ namespace QLQuanCafe
             cbTableStatus.DisplayMember = "Text";
             cbTableStatus.ValueMember = "Value";
         }
+
+        void ClearTableInformation()
+        {
+            txtIDTable.Text = "";
+            txtTableName.Text = "";
+            cbTableStatus.SelectedIndex = 0;
+            txtIDTable.ReadOnly = false;
+
+            _isAddingTable = false;
+            btnEditTable.Text = "Sửa bàn";
+        }
+
+        void TableField_Changed(object sender, EventArgs e)
+        {
+            if (txtIDTable.Text == "") return;
+
+            bool currentStatus = Convert.ToBoolean(cbTableStatus.SelectedValue);
+
+            bool isChanged =
+                txtTableName.Text != _originTableName ||
+                currentStatus != _originTableStatus;
+
+            btnEditTable.Text = isChanged ? "Cập nhật" : "Sửa bàn";
+
+        }
+
         private void LoadGridViewFoodTable() // load dữ liệu bàn từ DB lên DataGridView
         {
             using (SqlConnection connection = new SqlConnection(connection_string_sql))
@@ -340,8 +396,8 @@ namespace QLQuanCafe
                                                         FROM Bill b 
                                                         WHERE b.IDTable = ft.tableID AND b.billStatus = 1
                                                     )
-                                                    THEN 1
-                                                    ELSE 0
+                                                    THEN N'Có người'
+                                                    ELSE N'Trống'
                                                 END AS tableStatus
                                                 FROM FoodTable ft";
 
@@ -357,18 +413,223 @@ namespace QLQuanCafe
             dtgvTable.Columns["tableName"].HeaderText = "Tên bàn";
             dtgvTable.Columns["tableStatus"].HeaderText = "Trạng thái";
         }
-        private void dtgvTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void dtgvTable_CellClick(object sender, DataGridViewCellEventArgs e) // khi click vào 1 dòng trong datagridview table
         {
-            if(e.RowIndex < 0) return;
+            if (e.RowIndex < 0) return;
+
+            if (_isAddingTable)
+            {
+                _isAddingTable = false;
+                btnEditTable.Text = "Sửa bàn";
+            }
+
             DataGridViewRow row = dtgvTable.Rows[e.RowIndex];
 
             txtIDTable.Text = row.Cells["tableID"].Value.ToString();
             txtTableName.Text = row.Cells["tableName"].Value.ToString();
-            cbTableStatus.SelectedValue = Convert.ToBoolean(row.Cells["tableStatus"].Value);
+
+            bool status = row.Cells["tableStatus"].Value.ToString() == "Có người";
+            cbTableStatus.SelectedValue = status;
 
             txtIDTable.ReadOnly = true;
+
+            //LƯU GIÁ TRỊ BAN ĐẦU
+            _originTableName = txtTableName.Text;
+            _originTableStatus = status;
+
+            // reset nút
+            btnEditTable.Text = "Sửa bàn";
         }
 
+        private void btnAddTable_Click(object sender, EventArgs e)
+        {
+            if (!_isAddingTable)
+            {
+                ClearTableInformation();
+                _isAddingTable = true;
+                txtTableName.Focus();
+                return;
+            }
+
+            if (txtTableName.Text.Trim().Length <= 1)
+            {
+                MessageBox.Show("Tên bàn phải nhiều hơn 1 ký tự");
+                return;
+            }
+
+            // 2. Kiểm tra trùng tên bàn
+            string qCheck = "SELECT COUNT(*) FROM FoodTable WHERE tableName = @tableName";
+            SqlCommand cmdCheck = new SqlCommand(qCheck, ketNoi);
+            cmdCheck.Parameters.AddWithValue("@tableName", txtTableName.Text.Trim());
+
+            try
+            {
+                ketNoi.Open();
+                int check = (int)cmdCheck.ExecuteScalar();
+
+                if (check != 0)
+                {
+                    MessageBox.Show("Tên bàn đã tồn tại, vui lòng nhập tên khác");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kiểm tra tên bàn: " + ex.Message);
+                return;
+            }
+            finally
+            {
+                if (ketNoi.State == ConnectionState.Open)
+                    ketNoi.Close();
+            }
+
+            // 3. Thêm bàn (giống Add Account)
+            string qAdd = "INSERT INTO FoodTable (tableName, tableStatus) VALUES (@tableName, @tableStatus)";
+            boDocGhi = new SqlDataAdapter();
+            boDocGhi.InsertCommand = new SqlCommand(qAdd, ketNoi);
+            boDocGhi.InsertCommand.Parameters.AddWithValue("@tableName", txtTableName.Text.Trim());
+            boDocGhi.InsertCommand.Parameters.AddWithValue("@tableStatus", cbTableStatus.SelectedValue);
+
+            try
+            {
+                ketNoi.Open();
+                boDocGhi.InsertCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Thêm bàn thành công");
+                LoadGridViewFoodTable();
+
+                ClearTableInformation();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thêm bàn: " + ex.Message);
+            }
+            finally
+            {
+                if (ketNoi.State == ConnectionState.Open)
+                    ketNoi.Close();
+            }
+        }
+
+        private void btnDelTable_Click(object sender, EventArgs e)
+        {
+            if (txtIDTable.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần xóa");
+                return;
+            }
+
+            DialogResult rs = MessageBox.Show(
+                $"Bạn có chắc muốn xóa bàn [{txtTableName.Text}]?",
+                "Xác nhận",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (rs == DialogResult.No) return;
+
+            string qDel = "DELETE FROM FoodTable WHERE tableID = @tableID";
+            SqlCommand cmdDel = new SqlCommand(qDel, ketNoi);
+            cmdDel.Parameters.AddWithValue("@tableID", txtIDTable.Text);
+
+            try
+            {
+                ketNoi.Open();
+                int kq = cmdDel.ExecuteNonQuery();
+
+                if (kq > 0)
+                {
+                    MessageBox.Show("Xóa bàn thành công");
+                    LoadGridViewFoodTable();
+
+                    // reset dữ liệu
+                    txtIDTable.Text = "";
+                    txtTableName.Text = "";
+                    cbTableStatus.SelectedIndex = 0;
+                    txtIDTable.ReadOnly = false;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy bàn để xóa");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xóa bàn: " + ex.Message);
+            }
+            finally
+            {
+                if (ketNoi.State == ConnectionState.Open)
+                    ketNoi.Close();
+            }
+        }
+
+        private void btnEditTable_Click(object sender, EventArgs e)
+        {
+            if (txtIDTable.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần sửa");
+                return;
+            }
+
+            if (txtTableName.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên bàn");
+                return;
+            }
+
+            DialogResult rs = MessageBox.Show(
+                $"Bạn có chắc muốn sửa thông tin bàn [{txtTableName.Text}]?",
+                "Xác nhận",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (rs == DialogResult.No) return;
+
+            string qUpdate = @"UPDATE FoodTable SET
+                tableName = @tableName,
+                tableStatus = @tableStatus
+                WHERE tableID = @tableID";
+
+            SqlCommand cmdUpdate = new SqlCommand(qUpdate, ketNoi);
+            cmdUpdate.Parameters.AddWithValue("@tableName", txtTableName.Text);
+            cmdUpdate.Parameters.AddWithValue("@tableStatus", cbTableStatus.SelectedValue);
+            cmdUpdate.Parameters.AddWithValue("@tableID", txtIDTable.Text);
+
+            try
+            {
+                ketNoi.Open();
+                int kq = cmdUpdate.ExecuteNonQuery();
+
+                if (kq > 0)
+                {
+                    MessageBox.Show("Cập nhật bàn thành công");
+                    LoadGridViewFoodTable();
+
+                    // reset dữ liệu
+                    txtIDTable.Text = "";
+                    txtTableName.Text = "";
+                    cbTableStatus.SelectedIndex = 0;
+                    txtIDTable.ReadOnly = false;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy bàn để cập nhật");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi sửa bàn: " + ex.Message);
+            }
+            finally
+            {
+                if (ketNoi.State == ConnectionState.Open)
+                    ketNoi.Close();
+            }
+        }
+        
+        
         //XU LY DOANH THU -----------------------------------------------------------------------------
         private void btnShowTKDoanhThu_Click(object sender, EventArgs e) // XU LY THONG KE DOANH THU
         {
@@ -424,35 +685,39 @@ namespace QLQuanCafe
             rpvDoanhThu.RefreshReport();
         }
 
-        private void dtpkIn_ValueChanged(object sender, EventArgs e)
+        private void dtpkIn_ValueChanged(object sender, EventArgs e) // XU LY NGAY BAT DAU
         {
             if (dtpkOut.Value < dtpkIn.Value)
                 dtpkOut.Value = dtpkIn.Value;
         }
 
-        private void dtpkOut_ValueChanged(object sender, EventArgs e)
+        private void dtpkOut_ValueChanged(object sender, EventArgs e) // XU LY NGAY KET THUC
         {
             if (dtpkOut.Value < dtpkIn.Value)
                 MessageBox.Show("Ngày ra phải >= ngày vào");
         }
 
+        
         //XU LY FOOD -----------------------------------------------------------------------------
-        void LoadFood()
+        void LoadFood(string keyword = "") // load dữ liệu food từ DB lên DataGridView
         {
             using (SqlConnection conn = new SqlConnection(connection_string_sql))
             {
-                string sql = @"
-            SELECT 
-                f.foodID,
-                f.foodName,
-                f.foodPrice,
-                f.IDCategory,
-                fc.foodCateName,
-                f.foodImage
-            FROM Food f
-            JOIN FoodCategory fc ON f.IDCategory = fc.foodCateID";
+                string sql = @"SELECT 
+                                f.foodID,
+                                f.foodName,
+                                f.foodPrice,
+                                f.IDCategory,
+                                fc.foodCateName,
+                                f.foodImage
+                            FROM Food f
+                            JOIN FoodCategory fc ON f.IDCategory = fc.foodCateID
+                            WHERE (@key = '' OR f.foodName LIKE '%' + @key + '%')";
 
-                SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@key", keyword);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
@@ -465,10 +730,20 @@ namespace QLQuanCafe
             dtgvFoodDrink.Columns["foodCateName"].HeaderText = "Danh mục";
             dtgvFoodDrink.Columns["foodImage"].HeaderText = "Đường dẫn";
 
-            // Ẩn cột IDCategory (vẫn dùng nội bộ)
             dtgvFoodDrink.Columns["IDCategory"].Visible = false;
         }
-        void FoodField_Changed()
+        private void txbFindFoodName_TextChanged(object sender, EventArgs e)
+        {
+            LoadFood(txbFindFoodName.Text.Trim());
+        }
+
+        private void btnFindFood_Click(object sender, EventArgs e)
+        {
+            string keyword = txbFindFoodName.Text.Trim();
+            LoadFood(keyword);
+        }
+
+        void FoodField_Changed() // theo dõi thay đổi trên form food
         {
             if (string.IsNullOrEmpty(txbFoodID.Text)) return;
 
@@ -518,7 +793,22 @@ namespace QLQuanCafe
             txbFoodName.Focus();
         }
 
-        string SaveFoodImage(string sourcePath)
+        private void txbFoodName_TextChanged(object sender, EventArgs e)
+        {
+            FoodField_Changed();
+        }
+
+        private void txbPrice_TextChanged(object sender, EventArgs e)
+        {
+            FoodField_Changed();
+        }
+
+        private void cbFoodCategory_SelectedValueChanged(object sender, EventArgs e)
+        {
+            FoodField_Changed();
+        }
+
+        string SaveFoodImage(string sourcePath) // lưu ảnh món ăn vào thư mục và trả về path tương đối để lưu DB
         {
             if (string.IsNullOrEmpty(sourcePath)) return null;
 
@@ -533,13 +823,13 @@ namespace QLQuanCafe
             // copy đè nếu trùng tên
             File.Copy(sourcePath, destPath, true);
 
-            // path lưu DB (tương đối)
+            // path lưu DB
             return @"imageUpload\foods\" + fileName;
         }
 
         private void btnFoodAdd_Click(object sender, EventArgs e)
         {
-            // LẦN ĐẦU: chuẩn bị thêm món
+            // Nếu chưa ở trạng thái thêm món
             if (!_isAddingFood)
             {
                 ClearFoodForm();
@@ -547,8 +837,6 @@ namespace QLQuanCafe
                 btnFoodAdd.Text = "Lưu món";
                 return;
             }
-
-            // ===== TỪ ĐÂY TRỞ ĐI MỚI VALIDATE =====
 
             if (txbFoodName.Text.Trim() == "")
             {
@@ -594,8 +882,7 @@ namespace QLQuanCafe
 
             string imageDbPath = SaveFoodImage(_foodImagePath);
 
-            string query = @"INSERT INTO Food (foodName, foodPrice, IDCategory, foodImage)
-                     VALUES (@name, @price, @cat, @image)";
+            string query = @"INSERT INTO Food (foodName, foodPrice, IDCategory, foodImage) VALUES (@name, @price, @cat, @image)";
 
             using (SqlConnection conn = new SqlConnection(connection_string_sql))
             {
@@ -617,6 +904,7 @@ namespace QLQuanCafe
             btnFoodAdd.Text = "Thêm món";
 
         }
+        
         private void btnDelFood_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txbFoodID.Text))
@@ -674,7 +962,7 @@ namespace QLQuanCafe
                 return;
             }
 
-            // ===== VALIDATE =====
+
             if (txbFoodName.Text.Trim() == "")
             {
                 MessageBox.Show("Tên món không được để trống");
@@ -693,7 +981,7 @@ namespace QLQuanCafe
                 return;
             }
 
-            // ===== KIỂM TRA TRÙNG TÊN (TRỪ CHÍNH NÓ) =====
+            // KIỂM TRA TRÙNG TÊN (TRỪ CHÍNH NÓ) 
             using (SqlConnection conn = new SqlConnection(connection_string_sql))
             {
                 string checkQuery = @"SELECT COUNT(*) FROM Food WHERE foodName = @name AND foodID <> @id";
@@ -710,21 +998,15 @@ namespace QLQuanCafe
                 }
             }
 
-            // ===== XỬ LÝ ẢNH =====
+            // XỬ LÝ ẢNH 
             string imageDbPath = _originFoodImage;
             if (!string.IsNullOrEmpty(_foodImagePath))
             {
                 imageDbPath = SaveFoodImage(_foodImagePath);
             }
 
-            // ===== UPDATE =====
-            string query = @"
-        UPDATE Food SET
-            foodName = @name,
-            foodPrice = @price,
-            IDCategory = @cat,
-            foodImage = @image
-        WHERE foodID = @id";
+            // UPDATE 
+            string query = @"UPDATE Food SET foodName = @name, foodPrice = @price, IDCategory = @cat, foodImage = @image WHERE foodID = @id";
 
             using (SqlConnection conn = new SqlConnection(connection_string_sql))
             {
@@ -762,6 +1044,12 @@ namespace QLQuanCafe
         {
             if (e.RowIndex < 0) return;
 
+            if (_isAddingFood)
+            {
+                _isAddingFood = false;
+                btnFoodAdd.Text = "Thêm món";
+            }
+
             DataGridViewRow row = dtgvFoodDrink.Rows[e.RowIndex];
 
             txbFoodID.Text = row.Cells["foodID"].Value.ToString();
@@ -786,26 +1074,240 @@ namespace QLQuanCafe
                 picFood.Image = null;
             }
 
-            // ⭐ LƯU GIÁ TRỊ GỐC
+            // LƯU GIÁ TRỊ GỐC
             _originFoodName = txbFoodName.Text;
             _originFoodPrice = float.Parse(txbPrice.Text);
             _originFoodCategory = (int)cbFoodCategory.SelectedValue;
 
             btnEditFoods.Text = "Sửa món";
         }
-        private void txbFoodName_TextChanged(object sender, EventArgs e)
+        
+        
+        //XU LY CATEGORY -----------------------------------------------------------------------------
+        void LoadGridViewCategory()
         {
-            FoodField_Changed();
+            using (SqlConnection conn = new SqlConnection(connection_string_sql))
+            {
+                string query = "SELECT foodCateID, foodCateName FROM FoodCategory";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dtgvCategory.DataSource = dt;
+            }
+            dtgvCategory.Columns["foodCateID"].HeaderText = "Mã danh mục";
+            dtgvCategory.Columns["foodCateName"].HeaderText = "Tên danh mục";
+        }
+        
+        void CategoryField_Changed()
+        {
+            if (string.IsNullOrEmpty(txbCategoryID.Text)) return;
+
+            bool isChanged = txtNameCate.Text.Trim() != _originCategoryName;
+
+            btnEditCategory.Text = isChanged ? "Cập nhật" : "Sửa danh mục";
         }
 
-        private void cbFoodCategory_SelectedIndexChanged(object sender, EventArgs e)
+        void ClearFoodCatogoryInput()
         {
-            FoodField_Changed();
+            txtNameCate.Text = "";
+            txbCategoryID.Text = "";
+
+            _originCategoryName = "";
+            _isAddingCategory = false;
+
+            btnEditCategory.Text = "Sửa danh mục";
+        }
+        
+        private void dtgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            if (_isAddingCategory)
+            {
+                _isAddingCategory = false;
+                btnEditCategory.Text = "Sửa danh mục";
+            }
+
+            DataGridViewRow row = dtgvCategory.Rows[e.RowIndex];
+
+            txtNameCate.Text = row.Cells["foodCateName"].Value.ToString();
+            txbCategoryID.Text = row.Cells["foodCateID"].Value.ToString();
+
+            // LƯU GIÁ TRỊ GỐC
+            _originCategoryName = txtNameCate.Text;
+
+            btnEditCategory.Text = "Sửa danh mục";
         }
 
-        private void txbPrice_TextChanged(object sender, EventArgs e)
+        private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            FoodField_Changed();
+            if (!_isAddingCategory)
+            {
+                ClearFoodCatogoryInput();
+                _isAddingCategory = true;
+                txtNameCate.Focus();
+                return;
+            }
+            if (txtNameCate.Text.Trim().Length <= 1)
+            {
+                MessageBox.Show("Tên danh mục phải nhiều hơn 1 ký tự");
+                return;
+            }
+
+            string qCheck = "SELECT COUNT(*) FROM FoodCategory WHERE foodCateName = @name";
+            SqlCommand cmdCheck = new SqlCommand(qCheck, ketNoi);
+            cmdCheck.Parameters.AddWithValue("@name", txtNameCate.Text.Trim());
+
+            try
+            {
+                ketNoi.Open();
+                int check = (int)cmdCheck.ExecuteScalar();
+                if (check > 0)
+                {
+                    MessageBox.Show("Tên danh mục đã tồn tại");
+                    ClearFoodCatogoryInput();
+                    return;
+
+                }
+            }
+            finally
+            {
+                if (ketNoi.State == ConnectionState.Open)
+                    ketNoi.Close();
+            }
+
+            string qAdd = "INSERT INTO FoodCategory(foodCateName) VALUES(@name)";
+            SqlCommand cmdAdd = new SqlCommand(qAdd, ketNoi);
+            cmdAdd.Parameters.AddWithValue("@name", txtNameCate.Text.Trim());
+
+            try
+            {
+                ketNoi.Open();
+                cmdAdd.ExecuteNonQuery();
+                MessageBox.Show("Thêm danh mục thành công");
+                LoadGridViewCategory();
+                ClearFoodCatogoryInput();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thêm danh mục: " + ex.Message);
+                return;
+            }
+            finally
+            {
+                if (ketNoi.State == ConnectionState.Open)
+                    ketNoi.Close();
+            }
         }
+
+        private void txtNameCate_TextChanged(object sender, EventArgs e)
+        {
+            CategoryField_Changed();
+        }
+
+        private void btnDelCategory_Click(object sender, EventArgs e)
+        {
+            if (dtgvCategory.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn danh mục cần xóa");
+                return;
+            }
+            DialogResult rs = MessageBox.Show(
+                $"Bạn có chắc muốn xóa danh mục [{dtgvCategory.CurrentRow.Cells["foodCateName"].Value}]?",
+                "Xác nhận",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (rs == DialogResult.No) return;
+
+            string qDel = "DELETE FROM FoodCategory WHERE foodCateID = @foodCateID";
+            SqlCommand cmdDel = new SqlCommand(qDel, ketNoi);
+            cmdDel.Parameters.AddWithValue("@foodCateID", dtgvCategory.CurrentRow.Cells["foodCateID"].Value);
+
+            try
+            {
+                ketNoi.Open();
+                int kq = cmdDel.ExecuteNonQuery();
+                if (kq > 0)
+                {
+                    MessageBox.Show("Xóa danh mục thành công");
+                    LoadGridViewCategory();
+
+                    txtNameCate.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy danh mục để xóa");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xóa danh mục: " + ex.Message);
+                return;
+            }
+            finally
+            {
+                if (ketNoi.State == ConnectionState.Open)
+                    ketNoi.Close();
+            }
+        }
+
+        private void btnEditCategory_Click(object sender, EventArgs e)
+        {
+            if (btnEditCategory.Text == "Sửa danh mục")
+            {
+                MessageBox.Show("Chưa có thay đổi");
+                return;
+            }
+
+            if (dtgvCategory.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn danh mục cần sửa");
+                return;
+            }
+
+            if (txtNameCate.Text.Trim() == "")
+            {
+                MessageBox.Show("Tên danh mục không được để trống");
+                return;
+            }
+
+            DialogResult rs = MessageBox.Show(
+                $"Bạn có chắc muốn sửa danh mục?",
+                "Xác nhận",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (rs == DialogResult.No) return;
+
+            string qUpdate = @"UPDATE FoodCategory 
+               SET foodCateName = @name 
+               WHERE foodCateID = @id";
+
+            SqlCommand cmd = new SqlCommand(qUpdate, ketNoi);
+            cmd.Parameters.AddWithValue("@name", txtNameCate.Text.Trim());
+            cmd.Parameters.AddWithValue("@id", dtgvCategory.CurrentRow.Cells["foodCateID"].Value);
+
+            try
+            {
+                ketNoi.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cập nhật danh mục thành công");
+
+                LoadGridViewCategory();
+
+                // reset trạng thái
+                _originCategoryName = txtNameCate.Text;
+                btnEditCategory.Text = "Sửa danh mục";
+                txtNameCate.Text = "";
+                txbCategoryID.Text = "";
+            }
+            finally
+            {
+                ketNoi.Close();
+            }
+        }
+
+        
     }
 }

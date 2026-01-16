@@ -307,8 +307,6 @@ namespace QLQuanCafe
             }
         }
 
-
-
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e) // load món khi chọn danh mục
         {
             if (cbCategory.SelectedValue == null) return;

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|d:\\nctu\\dotnet\\qlquancafe\\qlquancafe\\qlquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\qlquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|solutionrelative:qlquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\qlquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|d:\\nctu\\dotnet\\qlquancafe\\qlquancafe\\qlquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|solutionrelative:qlquancafe\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\qlquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEAEE593-5D1B-4AB6-A219-DE1683729E51}|QLQuanCafe\\QLQuanCafe.csproj|solutionrelative:qlquancafe\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +28,7 @@
               "RelativeDocumentMoniker": "QLQuanCafe\\fAdmin.cs",
               "ToolTip": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\QLQuanCafe\\fAdmin.cs",
               "RelativeToolTip": "QLQuanCafe\\fAdmin.cs",
-              "ViewState": "AgIAAMwCAAAAAAAAAAAwwNgCAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAqwHEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T16:07:29.77Z",
               "IsPinned": true,
@@ -49,17 +45,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-13T00:38:18.413Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "fTableManager.cs [Design]",
-              "DocumentMoniker": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\QLQuanCafe\\fTableManager.cs",
-              "RelativeDocumentMoniker": "QLQuanCafe\\fTableManager.cs",
-              "ToolTip": "D:\\NCTU\\dotNET\\QLQuanCafe\\QLQuanCafe\\QLQuanCafe\\fTableManager.cs [Design]",
-              "RelativeToolTip": "QLQuanCafe\\fTableManager.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T14:33:56.679Z"
             }
           ]
         }

@@ -52,25 +52,16 @@
             this.label19 = new System.Windows.Forms.Label();
             this.tpAccount = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cbTypeAccount = new System.Windows.Forms.ComboBox();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cbTypeAccount = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtDisplayName = new System.Windows.Forms.TextBox();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtDisplayName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnResetPassword = new System.Windows.Forms.Button();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel30 = new System.Windows.Forms.Panel();
-            this.btnShowAccount = new System.Windows.Forms.Button();
             this.btnEditAccount = new System.Windows.Forms.Button();
             this.btnDelAccount = new System.Windows.Forms.Button();
             this.btnAddAccount = new System.Windows.Forms.Button();
@@ -78,14 +69,11 @@
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel19 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.txbCategoryID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNameCate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txbCategoryID = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.btnShowCategory = new System.Windows.Forms.Button();
             this.btnEditCategory = new System.Windows.Forms.Button();
             this.btnDelCategory = new System.Windows.Forms.Button();
             this.btnAddCategory = new System.Windows.Forms.Button();
@@ -93,17 +81,13 @@
             this.dtgvCategory = new System.Windows.Forms.DataGridView();
             this.tpTable = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.cbTableStatus = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTableName = new System.Windows.Forms.TextBox();
-            this.panel20 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTableName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbTableStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtIDTable = new System.Windows.Forms.TextBox();
+            this.txtIDTable = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.btnShowTable = new System.Windows.Forms.Button();
             this.btnEditTable = new System.Windows.Forms.Button();
             this.btnDelTable = new System.Windows.Forms.Button();
             this.btnAddTable = new System.Windows.Forms.Button();
@@ -111,7 +95,7 @@
             this.dtgvTable = new System.Windows.Forms.DataGridView();
             this.tpFood = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnChooseFoodImage = new Guna.UI2.WinForms.Guna2Button();
+            this.btnChooseFoodImage1 = new Guna.UI2.WinForms.Guna2Button();
             this.picFood = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cbFoodCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txbPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -121,11 +105,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txbFoodID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txbFindFoodName = new System.Windows.Forms.TextBox();
-            this.btnFindFood = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnShowFoods = new System.Windows.Forms.Button();
             this.btnEditFoods = new System.Windows.Forms.Button();
             this.btnDelFood = new System.Windows.Forms.Button();
             this.btnFoodAdd = new System.Windows.Forms.Button();
@@ -133,39 +113,32 @@
             this.dtgvFoodDrink = new System.Windows.Forms.DataGridView();
             this.tbFoodCategory = new System.Windows.Forms.TabControl();
             this.ofdFoodImage = new System.Windows.Forms.OpenFileDialog();
+            this.btnFindFood = new Guna.UI2.WinForms.Guna2Button();
+            this.txbFindFoodName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txbFindAccountName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnFindAccount = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel32.SuspendLayout();
             this.tpAccount.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel28.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel29.SuspendLayout();
+            this.guna2GroupBox1.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).BeginInit();
             this.tpTable.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel20.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).BeginInit();
             this.tpFood.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFood)).BeginInit();
-            this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFoodDrink)).BeginInit();
@@ -298,7 +271,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1205, 644);
+            this.tabPage3.Size = new System.Drawing.Size(1264, 644);
             this.tabPage3.TabIndex = 6;
             this.tabPage3.Text = "Doanh thu";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -398,204 +371,167 @@
             // 
             // tpAccount
             // 
+            this.tpAccount.Controls.Add(this.txbFindAccountName);
             this.tpAccount.Controls.Add(this.panel1);
-            this.tpAccount.Controls.Add(this.panel29);
             this.tpAccount.Controls.Add(this.panel30);
+            this.tpAccount.Controls.Add(this.btnFindAccount);
             this.tpAccount.Controls.Add(this.panel31);
             this.tpAccount.Location = new System.Drawing.Point(4, 25);
             this.tpAccount.Name = "tpAccount";
             this.tpAccount.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAccount.Size = new System.Drawing.Size(1205, 644);
+            this.tpAccount.Size = new System.Drawing.Size(1264, 644);
             this.tpAccount.TabIndex = 4;
             this.tpAccount.Text = "Tài khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.btnResetPassword);
+            this.panel1.Controls.Add(this.guna2GroupBox1);
             this.panel1.Location = new System.Drawing.Point(807, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 576);
+            this.panel1.Size = new System.Drawing.Size(451, 576);
             this.panel1.TabIndex = 8;
             // 
-            // groupBox1
+            // guna2GroupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel28);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel27);
-            this.groupBox1.Controls.Add(this.panel26);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(377, 330);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin tài khoản";
-            // 
-            // panel28
-            // 
-            this.panel28.Controls.Add(this.label17);
-            this.panel28.Controls.Add(this.txtUserName);
-            this.panel28.Location = new System.Drawing.Point(5, 34);
-            this.panel28.Margin = new System.Windows.Forms.Padding(4);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(365, 64);
-            this.panel28.TabIndex = 1;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(7, 20);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(143, 24);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Tên tài khoản:";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtUserName.Location = new System.Drawing.Point(176, 13);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.ReadOnly = true;
-            this.txtUserName.Size = new System.Drawing.Size(170, 34);
-            this.txtUserName.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.cbTypeAccount);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Location = new System.Drawing.Point(6, 251);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(364, 64);
-            this.panel2.TabIndex = 5;
+            this.guna2GroupBox1.Controls.Add(this.cbTypeAccount);
+            this.guna2GroupBox1.Controls.Add(this.txtPassword);
+            this.guna2GroupBox1.Controls.Add(this.label14);
+            this.guna2GroupBox1.Controls.Add(this.txtDisplayName);
+            this.guna2GroupBox1.Controls.Add(this.label15);
+            this.guna2GroupBox1.Controls.Add(this.label16);
+            this.guna2GroupBox1.Controls.Add(this.label17);
+            this.guna2GroupBox1.Controls.Add(this.txtUserName);
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Location = new System.Drawing.Point(3, 3);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(445, 281);
+            this.guna2GroupBox1.TabIndex = 7;
+            this.guna2GroupBox1.Text = "Thông tin tài khoản";
             // 
             // cbTypeAccount
             // 
-            this.cbTypeAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTypeAccount.FormattingEnabled = true;
-            this.cbTypeAccount.Location = new System.Drawing.Point(176, 16);
+            this.cbTypeAccount.BackColor = System.Drawing.Color.Transparent;
+            this.cbTypeAccount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTypeAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTypeAccount.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTypeAccount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTypeAccount.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbTypeAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbTypeAccount.ItemHeight = 30;
+            this.cbTypeAccount.Location = new System.Drawing.Point(198, 224);
             this.cbTypeAccount.Name = "cbTypeAccount";
-            this.cbTypeAccount.Size = new System.Drawing.Size(169, 33);
-            this.cbTypeAccount.TabIndex = 1;
+            this.cbTypeAccount.Size = new System.Drawing.Size(229, 36);
+            this.cbTypeAccount.TabIndex = 3;
             this.cbTypeAccount.SelectedValueChanged += new System.EventHandler(this.AccountField_Changed);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(13, 20);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 24);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Loại tài khoản:";
-            // 
-            // panel27
-            // 
-            this.panel27.Controls.Add(this.label16);
-            this.panel27.Controls.Add(this.txtDisplayName);
-            this.panel27.Location = new System.Drawing.Point(5, 107);
-            this.panel27.Margin = new System.Windows.Forms.Padding(4);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(365, 64);
-            this.panel27.TabIndex = 2;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(13, 20);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(128, 24);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Tên hiển thị:";
-            // 
-            // txtDisplayName
-            // 
-            this.txtDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtDisplayName.Location = new System.Drawing.Point(176, 13);
-            this.txtDisplayName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDisplayName.Name = "txtDisplayName";
-            this.txtDisplayName.Size = new System.Drawing.Size(170, 34);
-            this.txtDisplayName.TabIndex = 1;
-            this.txtDisplayName.TextChanged += new System.EventHandler(this.AccountField_Changed);
-            // 
-            // panel26
-            // 
-            this.panel26.Controls.Add(this.txtPassword);
-            this.panel26.Controls.Add(this.label15);
-            this.panel26.Location = new System.Drawing.Point(5, 179);
-            this.panel26.Margin = new System.Windows.Forms.Padding(4);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(365, 64);
-            this.panel26.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtPassword.Location = new System.Drawing.Point(175, 13);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(198, 170);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(171, 34);
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(229, 36);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextChanged += new System.EventHandler(this.AccountField_Changed);
             // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(23, 224);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(155, 36);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Loại tài khoản";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDisplayName
+            // 
+            this.txtDisplayName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDisplayName.DefaultText = "";
+            this.txtDisplayName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDisplayName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDisplayName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDisplayName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDisplayName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDisplayName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDisplayName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDisplayName.Location = new System.Drawing.Point(198, 113);
+            this.txtDisplayName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDisplayName.Name = "txtDisplayName";
+            this.txtDisplayName.PlaceholderText = "";
+            this.txtDisplayName.SelectedText = "";
+            this.txtDisplayName.Size = new System.Drawing.Size(229, 36);
+            this.txtDisplayName.TabIndex = 1;
+            this.txtDisplayName.TextChanged += new System.EventHandler(this.AccountField_Changed);
+            // 
             // label15
             // 
-            this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(13, 20);
+            this.label15.Location = new System.Drawing.Point(23, 170);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 24);
+            this.label15.Size = new System.Drawing.Size(155, 36);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Password:";
+            this.label15.Text = "Mật khẩu";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnResetPassword
+            // label16
             // 
-            this.btnResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetPassword.Location = new System.Drawing.Point(14, 339);
-            this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(364, 44);
-            this.btnResetPassword.TabIndex = 5;
-            this.btnResetPassword.Text = "Đặt lại mật khẩu";
-            this.btnResetPassword.UseVisualStyleBackColor = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(23, 113);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(155, 36);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Tên hiển thị";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel29
+            // label17
             // 
-            this.panel29.Controls.Add(this.textBox6);
-            this.panel29.Controls.Add(this.button1);
-            this.panel29.Location = new System.Drawing.Point(807, 6);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(392, 50);
-            this.panel29.TabIndex = 7;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(23, 57);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(155, 36);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Tên tài khoản";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // txtUserName
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(3, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(299, 38);
-            this.textBox6.TabIndex = 6;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(308, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 44);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserName.DefaultText = "";
+            this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.Location = new System.Drawing.Point(198, 57);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PlaceholderText = "";
+            this.txtUserName.ReadOnly = true;
+            this.txtUserName.SelectedText = "";
+            this.txtUserName.Size = new System.Drawing.Size(229, 36);
+            this.txtUserName.TabIndex = 0;
             // 
             // panel30
             // 
-            this.panel30.Controls.Add(this.btnShowAccount);
             this.panel30.Controls.Add(this.btnEditAccount);
             this.panel30.Controls.Add(this.btnDelAccount);
             this.panel30.Controls.Add(this.btnAddAccount);
@@ -604,20 +540,10 @@
             this.panel30.Size = new System.Drawing.Size(792, 50);
             this.panel30.TabIndex = 6;
             // 
-            // btnShowAccount
-            // 
-            this.btnShowAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAccount.Location = new System.Drawing.Point(645, 3);
-            this.btnShowAccount.Name = "btnShowAccount";
-            this.btnShowAccount.Size = new System.Drawing.Size(144, 44);
-            this.btnShowAccount.TabIndex = 4;
-            this.btnShowAccount.Text = "Xem tài khoản";
-            this.btnShowAccount.UseVisualStyleBackColor = true;
-            // 
             // btnEditAccount
             // 
             this.btnEditAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditAccount.Location = new System.Drawing.Point(421, 3);
+            this.btnEditAccount.Location = new System.Drawing.Point(649, 3);
             this.btnEditAccount.Name = "btnEditAccount";
             this.btnEditAccount.Size = new System.Drawing.Size(140, 44);
             this.btnEditAccount.TabIndex = 3;
@@ -628,7 +554,7 @@
             // btnDelAccount
             // 
             this.btnDelAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelAccount.Location = new System.Drawing.Point(211, 3);
+            this.btnDelAccount.Location = new System.Drawing.Point(327, 3);
             this.btnDelAccount.Name = "btnDelAccount";
             this.btnDelAccount.Size = new System.Drawing.Size(135, 44);
             this.btnDelAccount.TabIndex = 2;
@@ -680,84 +606,87 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1205, 644);
+            this.tabPage1.Size = new System.Drawing.Size(1264, 644);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Danh mục";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.panel18);
-            this.panel15.Controls.Add(this.panel19);
+            this.panel15.Controls.Add(this.label12);
+            this.panel15.Controls.Add(this.label11);
+            this.panel15.Controls.Add(this.txtNameCate);
+            this.panel15.Controls.Add(this.txbCategoryID);
             this.panel15.Location = new System.Drawing.Point(805, 62);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(394, 576);
+            this.panel15.Size = new System.Drawing.Size(453, 576);
             this.panel15.TabIndex = 8;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.label11);
-            this.panel18.Controls.Add(this.textBox2);
-            this.panel18.Location = new System.Drawing.Point(3, 76);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(385, 64);
-            this.panel18.TabIndex = 2;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(13, 20);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(152, 24);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Tên danh mục:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(173, 13);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 34);
-            this.textBox2.TabIndex = 1;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.label12);
-            this.panel19.Controls.Add(this.txbCategoryID);
-            this.panel19.Location = new System.Drawing.Point(3, 4);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(385, 64);
-            this.panel19.TabIndex = 1;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(13, 20);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 24);
+            this.label12.Size = new System.Drawing.Size(152, 53);
             this.label12.TabIndex = 0;
-            this.label12.Text = "ID:";
+            this.label12.Text = "ID";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(13, 94);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(177, 53);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Tên danh mục";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNameCate
+            // 
+            this.txtNameCate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameCate.DefaultText = "";
+            this.txtNameCate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameCate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameCate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameCate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameCate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameCate.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameCate.ForeColor = System.Drawing.Color.Black;
+            this.txtNameCate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameCate.Location = new System.Drawing.Point(197, 94);
+            this.txtNameCate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNameCate.Name = "txtNameCate";
+            this.txtNameCate.PlaceholderText = "";
+            this.txtNameCate.SelectedText = "";
+            this.txtNameCate.Size = new System.Drawing.Size(253, 53);
+            this.txtNameCate.TabIndex = 4;
+            this.txtNameCate.TextChanged += new System.EventHandler(this.txtNameCate_TextChanged);
             // 
             // txbCategoryID
             // 
-            this.txbCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txbCategoryID.Location = new System.Drawing.Point(173, 13);
-            this.txbCategoryID.Margin = new System.Windows.Forms.Padding(4);
+            this.txbCategoryID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbCategoryID.DefaultText = "";
+            this.txbCategoryID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbCategoryID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbCategoryID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbCategoryID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbCategoryID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbCategoryID.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCategoryID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbCategoryID.Location = new System.Drawing.Point(197, 20);
+            this.txbCategoryID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCategoryID.Name = "txbCategoryID";
+            this.txbCategoryID.PlaceholderText = "";
             this.txbCategoryID.ReadOnly = true;
-            this.txbCategoryID.Size = new System.Drawing.Size(208, 34);
-            this.txbCategoryID.TabIndex = 1;
+            this.txbCategoryID.SelectedText = "";
+            this.txbCategoryID.Size = new System.Drawing.Size(253, 53);
+            this.txbCategoryID.TabIndex = 3;
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.btnShowCategory);
             this.panel21.Controls.Add(this.btnEditCategory);
             this.panel21.Controls.Add(this.btnDelCategory);
             this.panel21.Controls.Add(this.btnAddCategory);
@@ -766,35 +695,27 @@
             this.panel21.Size = new System.Drawing.Size(792, 50);
             this.panel21.TabIndex = 6;
             // 
-            // btnShowCategory
-            // 
-            this.btnShowCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowCategory.Location = new System.Drawing.Point(607, 3);
-            this.btnShowCategory.Name = "btnShowCategory";
-            this.btnShowCategory.Size = new System.Drawing.Size(182, 44);
-            this.btnShowCategory.TabIndex = 4;
-            this.btnShowCategory.Text = "Xem danh mục";
-            this.btnShowCategory.UseVisualStyleBackColor = true;
-            // 
             // btnEditCategory
             // 
             this.btnEditCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditCategory.Location = new System.Drawing.Point(409, 3);
+            this.btnEditCategory.Location = new System.Drawing.Point(607, 3);
             this.btnEditCategory.Name = "btnEditCategory";
             this.btnEditCategory.Size = new System.Drawing.Size(182, 44);
             this.btnEditCategory.TabIndex = 3;
             this.btnEditCategory.Text = "Sửa danh mục";
             this.btnEditCategory.UseVisualStyleBackColor = true;
+            this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
             // 
             // btnDelCategory
             // 
             this.btnDelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelCategory.Location = new System.Drawing.Point(212, 3);
+            this.btnDelCategory.Location = new System.Drawing.Point(307, 3);
             this.btnDelCategory.Name = "btnDelCategory";
             this.btnDelCategory.Size = new System.Drawing.Size(182, 44);
             this.btnDelCategory.TabIndex = 2;
             this.btnDelCategory.Text = "Xóa danh mục";
             this.btnDelCategory.UseVisualStyleBackColor = true;
+            this.btnDelCategory.Click += new System.EventHandler(this.btnDelCategory_Click);
             // 
             // btnAddCategory
             // 
@@ -805,6 +726,7 @@
             this.btnAddCategory.TabIndex = 1;
             this.btnAddCategory.Text = "Thêm danh mục";
             this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // panel22
             // 
@@ -816,13 +738,19 @@
             // 
             // dtgvCategory
             // 
+            this.dtgvCategory.AllowUserToAddRows = false;
+            this.dtgvCategory.AllowUserToDeleteRows = false;
+            this.dtgvCategory.AllowUserToResizeRows = false;
             this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvCategory.Location = new System.Drawing.Point(3, 3);
+            this.dtgvCategory.MultiSelect = false;
             this.dtgvCategory.Name = "dtgvCategory";
+            this.dtgvCategory.ReadOnly = true;
             this.dtgvCategory.RowHeadersWidth = 51;
             this.dtgvCategory.RowTemplate.Height = 24;
             this.dtgvCategory.Size = new System.Drawing.Size(789, 570);
             this.dtgvCategory.TabIndex = 0;
+            this.dtgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCategory_CellClick);
             // 
             // tpTable
             // 
@@ -832,115 +760,117 @@
             this.tpTable.Location = new System.Drawing.Point(4, 25);
             this.tpTable.Name = "tpTable";
             this.tpTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTable.Size = new System.Drawing.Size(1205, 644);
+            this.tpTable.Size = new System.Drawing.Size(1264, 644);
             this.tpTable.TabIndex = 3;
             this.tpTable.Text = "Số bàn";
             this.tpTable.UseVisualStyleBackColor = true;
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.panel25);
-            this.panel16.Controls.Add(this.panel17);
-            this.panel16.Controls.Add(this.panel20);
+            this.panel16.Controls.Add(this.label9);
+            this.panel16.Controls.Add(this.label13);
+            this.panel16.Controls.Add(this.txtTableName);
+            this.panel16.Controls.Add(this.cbTableStatus);
+            this.panel16.Controls.Add(this.label10);
+            this.panel16.Controls.Add(this.txtIDTable);
             this.panel16.Location = new System.Drawing.Point(806, 62);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(393, 576);
+            this.panel16.Size = new System.Drawing.Size(452, 576);
             this.panel16.TabIndex = 11;
-            // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.cbTableStatus);
-            this.panel25.Controls.Add(this.label13);
-            this.panel25.Location = new System.Drawing.Point(3, 148);
-            this.panel25.Margin = new System.Windows.Forms.Padding(4);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(385, 64);
-            this.panel25.TabIndex = 3;
-            // 
-            // cbTableStatus
-            // 
-            this.cbTableStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTableStatus.FormattingEnabled = true;
-            this.cbTableStatus.Location = new System.Drawing.Point(130, 16);
-            this.cbTableStatus.Name = "cbTableStatus";
-            this.cbTableStatus.Size = new System.Drawing.Size(251, 33);
-            this.cbTableStatus.TabIndex = 2;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 20);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 24);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Trạng thái:";
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.label9);
-            this.panel17.Controls.Add(this.txtTableName);
-            this.panel17.Location = new System.Drawing.Point(3, 76);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(385, 64);
-            this.panel17.TabIndex = 2;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(13, 20);
+            this.label9.Location = new System.Drawing.Point(4, 74);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 24);
+            this.label9.Size = new System.Drawing.Size(110, 36);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Tên bàn:";
+            this.label9.Text = "Tên bàn";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(4, 138);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 36);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Trạng thái";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTableName
             // 
-            this.txtTableName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTableName.Location = new System.Drawing.Point(130, 13);
-            this.txtTableName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTableName.BackColor = System.Drawing.Color.Black;
+            this.txtTableName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTableName.DefaultText = "";
+            this.txtTableName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTableName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTableName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTableName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTableName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTableName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTableName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTableName.Location = new System.Drawing.Point(132, 74);
+            this.txtTableName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTableName.Name = "txtTableName";
-            this.txtTableName.Size = new System.Drawing.Size(251, 34);
-            this.txtTableName.TabIndex = 1;
+            this.txtTableName.PlaceholderText = "";
+            this.txtTableName.SelectedText = "";
+            this.txtTableName.Size = new System.Drawing.Size(306, 36);
+            this.txtTableName.TabIndex = 6;
+            this.txtTableName.TextChanged += new System.EventHandler(this.TableField_Changed);
             // 
-            // panel20
+            // cbTableStatus
             // 
-            this.panel20.Controls.Add(this.label10);
-            this.panel20.Controls.Add(this.txtIDTable);
-            this.panel20.Location = new System.Drawing.Point(3, 4);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(385, 64);
-            this.panel20.TabIndex = 1;
+            this.cbTableStatus.BackColor = System.Drawing.Color.Black;
+            this.cbTableStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTableStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTableStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTableStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTableStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbTableStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbTableStatus.ItemHeight = 30;
+            this.cbTableStatus.Location = new System.Drawing.Point(132, 138);
+            this.cbTableStatus.Name = "cbTableStatus";
+            this.cbTableStatus.Size = new System.Drawing.Size(306, 36);
+            this.cbTableStatus.TabIndex = 5;
+            this.cbTableStatus.SelectedValueChanged += new System.EventHandler(this.TableField_Changed);
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 20);
+            this.label10.Location = new System.Drawing.Point(8, 13);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 24);
+            this.label10.Size = new System.Drawing.Size(106, 36);
             this.label10.TabIndex = 0;
-            this.label10.Text = "ID:";
+            this.label10.Text = "ID";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtIDTable
             // 
-            this.txtIDTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtIDTable.Location = new System.Drawing.Point(130, 13);
-            this.txtIDTable.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDTable.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDTable.DefaultText = "";
+            this.txtIDTable.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIDTable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIDTable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDTable.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDTable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDTable.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtIDTable.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDTable.Location = new System.Drawing.Point(132, 13);
+            this.txtIDTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDTable.Name = "txtIDTable";
+            this.txtIDTable.PlaceholderText = "";
             this.txtIDTable.ReadOnly = true;
-            this.txtIDTable.Size = new System.Drawing.Size(251, 34);
-            this.txtIDTable.TabIndex = 1;
+            this.txtIDTable.SelectedText = "";
+            this.txtIDTable.Size = new System.Drawing.Size(306, 36);
+            this.txtIDTable.TabIndex = 4;
             // 
             // panel23
             // 
-            this.panel23.Controls.Add(this.btnShowTable);
             this.panel23.Controls.Add(this.btnEditTable);
             this.panel23.Controls.Add(this.btnDelTable);
             this.panel23.Controls.Add(this.btnAddTable);
@@ -949,35 +879,27 @@
             this.panel23.Size = new System.Drawing.Size(793, 50);
             this.panel23.TabIndex = 10;
             // 
-            // btnShowTable
-            // 
-            this.btnShowTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowTable.Location = new System.Drawing.Point(678, 3);
-            this.btnShowTable.Name = "btnShowTable";
-            this.btnShowTable.Size = new System.Drawing.Size(112, 44);
-            this.btnShowTable.TabIndex = 4;
-            this.btnShowTable.Text = "Xem bàn";
-            this.btnShowTable.UseVisualStyleBackColor = true;
-            // 
             // btnEditTable
             // 
             this.btnEditTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTable.Location = new System.Drawing.Point(445, 3);
+            this.btnEditTable.Location = new System.Drawing.Point(678, 3);
             this.btnEditTable.Name = "btnEditTable";
             this.btnEditTable.Size = new System.Drawing.Size(112, 44);
             this.btnEditTable.TabIndex = 3;
             this.btnEditTable.Text = "Sửa bàn";
             this.btnEditTable.UseVisualStyleBackColor = true;
+            this.btnEditTable.Click += new System.EventHandler(this.btnEditTable_Click);
             // 
             // btnDelTable
             // 
             this.btnDelTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelTable.Location = new System.Drawing.Point(215, 3);
+            this.btnDelTable.Location = new System.Drawing.Point(327, 3);
             this.btnDelTable.Name = "btnDelTable";
             this.btnDelTable.Size = new System.Drawing.Size(112, 44);
             this.btnDelTable.TabIndex = 2;
             this.btnDelTable.Text = "Xóa bàn";
             this.btnDelTable.UseVisualStyleBackColor = true;
+            this.btnDelTable.Click += new System.EventHandler(this.btnDelTable_Click);
             // 
             // btnAddTable
             // 
@@ -988,6 +910,7 @@
             this.btnAddTable.TabIndex = 1;
             this.btnAddTable.Text = "Thêm bàn";
             this.btnAddTable.UseVisualStyleBackColor = true;
+            this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
             // panel24
             // 
@@ -1015,21 +938,22 @@
             // 
             // tpFood
             // 
+            this.tpFood.Controls.Add(this.txbFindFoodName);
+            this.tpFood.Controls.Add(this.btnFindFood);
             this.tpFood.Controls.Add(this.panel7);
-            this.tpFood.Controls.Add(this.panel8);
             this.tpFood.Controls.Add(this.panel6);
             this.tpFood.Controls.Add(this.panel5);
             this.tpFood.Location = new System.Drawing.Point(4, 25);
             this.tpFood.Name = "tpFood";
             this.tpFood.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFood.Size = new System.Drawing.Size(1205, 644);
+            this.tpFood.Size = new System.Drawing.Size(1264, 644);
             this.tpFood.TabIndex = 1;
             this.tpFood.Text = "Đồ uống";
             this.tpFood.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.btnChooseFoodImage);
+            this.panel7.Controls.Add(this.btnChooseFoodImage1);
             this.panel7.Controls.Add(this.picFood);
             this.panel7.Controls.Add(this.cbFoodCategory);
             this.panel7.Controls.Add(this.txbPrice);
@@ -1041,31 +965,32 @@
             this.panel7.Controls.Add(this.txbFoodID);
             this.panel7.Location = new System.Drawing.Point(807, 62);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(392, 576);
+            this.panel7.Size = new System.Drawing.Size(451, 576);
             this.panel7.TabIndex = 4;
             // 
-            // btnChooseFoodImage
+            // btnChooseFoodImage1
             // 
-            this.btnChooseFoodImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChooseFoodImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChooseFoodImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChooseFoodImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChooseFoodImage.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnChooseFoodImage.ForeColor = System.Drawing.Color.White;
-            this.btnChooseFoodImage.Location = new System.Drawing.Point(208, 483);
-            this.btnChooseFoodImage.Name = "btnChooseFoodImage";
-            this.btnChooseFoodImage.Size = new System.Drawing.Size(180, 45);
-            this.btnChooseFoodImage.TabIndex = 15;
-            this.btnChooseFoodImage.Text = "Chọn ảnh";
-            this.btnChooseFoodImage.Click += new System.EventHandler(this.btnChooseFoodImage_Click);
+            this.btnChooseFoodImage1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChooseFoodImage1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChooseFoodImage1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChooseFoodImage1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChooseFoodImage1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnChooseFoodImage1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChooseFoodImage1.ForeColor = System.Drawing.Color.White;
+            this.btnChooseFoodImage1.Location = new System.Drawing.Point(13, 520);
+            this.btnChooseFoodImage1.Name = "btnChooseFoodImage1";
+            this.btnChooseFoodImage1.Size = new System.Drawing.Size(421, 45);
+            this.btnChooseFoodImage1.TabIndex = 15;
+            this.btnChooseFoodImage1.Text = "Chọn ảnh";
+            this.btnChooseFoodImage1.Click += new System.EventHandler(this.btnChooseFoodImage_Click);
             // 
             // picFood
             // 
             this.picFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picFood.ImageRotate = 0F;
-            this.picFood.Location = new System.Drawing.Point(13, 259);
+            this.picFood.Location = new System.Drawing.Point(13, 256);
             this.picFood.Name = "picFood";
-            this.picFood.Size = new System.Drawing.Size(375, 218);
+            this.picFood.Size = new System.Drawing.Size(421, 253);
             this.picFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFood.TabIndex = 14;
             this.picFood.TabStop = false;
@@ -1078,13 +1003,13 @@
             this.cbFoodCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFoodCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFoodCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbFoodCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbFoodCategory.ForeColor = System.Drawing.Color.Black;
             this.cbFoodCategory.ItemHeight = 30;
-            this.cbFoodCategory.Location = new System.Drawing.Point(140, 137);
+            this.cbFoodCategory.Location = new System.Drawing.Point(161, 137);
             this.cbFoodCategory.Name = "cbFoodCategory";
-            this.cbFoodCategory.Size = new System.Drawing.Size(248, 36);
+            this.cbFoodCategory.Size = new System.Drawing.Size(273, 36);
             this.cbFoodCategory.TabIndex = 13;
-            this.cbFoodCategory.SelectedIndexChanged += new System.EventHandler(this.cbFoodCategory_SelectedIndexChanged);
+            this.cbFoodCategory.SelectedValueChanged += new System.EventHandler(this.cbFoodCategory_SelectedValueChanged);
             // 
             // txbPrice
             // 
@@ -1096,13 +1021,14 @@
             this.txbPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbPrice.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPrice.ForeColor = System.Drawing.Color.Black;
             this.txbPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPrice.Location = new System.Drawing.Point(140, 200);
+            this.txbPrice.Location = new System.Drawing.Point(161, 200);
             this.txbPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbPrice.Name = "txbPrice";
             this.txbPrice.PlaceholderText = "";
             this.txbPrice.SelectedText = "";
-            this.txbPrice.Size = new System.Drawing.Size(248, 36);
+            this.txbPrice.Size = new System.Drawing.Size(273, 36);
             this.txbPrice.TabIndex = 12;
             this.txbPrice.TextChanged += new System.EventHandler(this.txbPrice_TextChanged);
             // 
@@ -1127,13 +1053,14 @@
             this.txbFoodName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbFoodName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbFoodName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbFoodName.ForeColor = System.Drawing.Color.Black;
             this.txbFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbFoodName.Location = new System.Drawing.Point(140, 79);
+            this.txbFoodName.Location = new System.Drawing.Point(161, 79);
             this.txbFoodName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbFoodName.Name = "txbFoodName";
             this.txbFoodName.PlaceholderText = "";
             this.txbFoodName.SelectedText = "";
-            this.txbFoodName.Size = new System.Drawing.Size(248, 36);
+            this.txbFoodName.Size = new System.Drawing.Size(273, 36);
             this.txbFoodName.TabIndex = 9;
             this.txbFoodName.TextChanged += new System.EventHandler(this.txbFoodName_TextChanged);
             // 
@@ -1181,44 +1108,17 @@
             this.txbFoodID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbFoodID.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbFoodID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbFoodID.Location = new System.Drawing.Point(140, 22);
+            this.txbFoodID.Location = new System.Drawing.Point(161, 22);
             this.txbFoodID.Margin = new System.Windows.Forms.Padding(4);
             this.txbFoodID.Name = "txbFoodID";
             this.txbFoodID.PlaceholderText = "";
             this.txbFoodID.ReadOnly = true;
             this.txbFoodID.SelectedText = "";
-            this.txbFoodID.Size = new System.Drawing.Size(248, 36);
+            this.txbFoodID.Size = new System.Drawing.Size(273, 36);
             this.txbFoodID.TabIndex = 6;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.txbFindFoodName);
-            this.panel8.Controls.Add(this.btnFindFood);
-            this.panel8.Location = new System.Drawing.Point(807, 6);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(392, 50);
-            this.panel8.TabIndex = 3;
-            // 
-            // txbFindFoodName
-            // 
-            this.txbFindFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbFindFoodName.Location = new System.Drawing.Point(3, 5);
-            this.txbFindFoodName.Name = "txbFindFoodName";
-            this.txbFindFoodName.Size = new System.Drawing.Size(299, 38);
-            this.txbFindFoodName.TabIndex = 6;
-            // 
-            // btnFindFood
-            // 
-            this.btnFindFood.Location = new System.Drawing.Point(308, 3);
-            this.btnFindFood.Name = "btnFindFood";
-            this.btnFindFood.Size = new System.Drawing.Size(81, 44);
-            this.btnFindFood.TabIndex = 5;
-            this.btnFindFood.Text = "Tìm kiếm";
-            this.btnFindFood.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnShowFoods);
             this.panel6.Controls.Add(this.btnEditFoods);
             this.panel6.Controls.Add(this.btnDelFood);
             this.panel6.Controls.Add(this.btnFoodAdd);
@@ -1227,20 +1127,10 @@
             this.panel6.Size = new System.Drawing.Size(794, 50);
             this.panel6.TabIndex = 1;
             // 
-            // btnShowFoods
-            // 
-            this.btnShowFoods.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowFoods.Location = new System.Drawing.Point(679, 3);
-            this.btnShowFoods.Name = "btnShowFoods";
-            this.btnShowFoods.Size = new System.Drawing.Size(112, 44);
-            this.btnShowFoods.TabIndex = 4;
-            this.btnShowFoods.Text = "Xem món";
-            this.btnShowFoods.UseVisualStyleBackColor = true;
-            // 
             // btnEditFoods
             // 
             this.btnEditFoods.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditFoods.Location = new System.Drawing.Point(465, 3);
+            this.btnEditFoods.Location = new System.Drawing.Point(679, 3);
             this.btnEditFoods.Name = "btnEditFoods";
             this.btnEditFoods.Size = new System.Drawing.Size(112, 44);
             this.btnEditFoods.TabIndex = 3;
@@ -1251,7 +1141,7 @@
             // btnDelFood
             // 
             this.btnDelFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelFood.Location = new System.Drawing.Point(226, 3);
+            this.btnDelFood.Location = new System.Drawing.Point(334, 3);
             this.btnDelFood.Name = "btnDelFood";
             this.btnDelFood.Size = new System.Drawing.Size(112, 44);
             this.btnDelFood.TabIndex = 2;
@@ -1305,7 +1195,7 @@
             this.tbFoodCategory.Location = new System.Drawing.Point(12, 12);
             this.tbFoodCategory.Name = "tbFoodCategory";
             this.tbFoodCategory.SelectedIndex = 0;
-            this.tbFoodCategory.Size = new System.Drawing.Size(1213, 673);
+            this.tbFoodCategory.Size = new System.Drawing.Size(1272, 673);
             this.tbFoodCategory.TabIndex = 0;
             this.tbFoodCategory.Tag = "";
             // 
@@ -1313,12 +1203,82 @@
             // 
             this.ofdFoodImage.FileName = "openFileDialog1";
             // 
+            // btnFindFood
+            // 
+            this.btnFindFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFindFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFindFood.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindFood.ForeColor = System.Drawing.Color.White;
+            this.btnFindFood.Location = new System.Drawing.Point(1082, 8);
+            this.btnFindFood.Name = "btnFindFood";
+            this.btnFindFood.Size = new System.Drawing.Size(176, 45);
+            this.btnFindFood.TabIndex = 7;
+            this.btnFindFood.Text = "Tìm đồ uống";
+            this.btnFindFood.Click += new System.EventHandler(this.btnFindFood_Click);
+            // 
+            // txbFindFoodName
+            // 
+            this.txbFindFoodName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbFindFoodName.DefaultText = "";
+            this.txbFindFoodName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbFindFoodName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbFindFoodName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbFindFoodName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbFindFoodName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbFindFoodName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbFindFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbFindFoodName.Location = new System.Drawing.Point(807, 8);
+            this.txbFindFoodName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbFindFoodName.Name = "txbFindFoodName";
+            this.txbFindFoodName.PlaceholderText = "";
+            this.txbFindFoodName.SelectedText = "";
+            this.txbFindFoodName.Size = new System.Drawing.Size(268, 45);
+            this.txbFindFoodName.TabIndex = 8;
+            this.txbFindFoodName.TextChanged += new System.EventHandler(this.txbFindFoodName_TextChanged);
+            // 
+            // txbFindAccountName
+            // 
+            this.txbFindAccountName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbFindAccountName.DefaultText = "";
+            this.txbFindAccountName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbFindAccountName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbFindAccountName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbFindAccountName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbFindAccountName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbFindAccountName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbFindAccountName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbFindAccountName.Location = new System.Drawing.Point(807, 9);
+            this.txbFindAccountName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbFindAccountName.Name = "txbFindAccountName";
+            this.txbFindAccountName.PlaceholderText = "";
+            this.txbFindAccountName.SelectedText = "";
+            this.txbFindAccountName.Size = new System.Drawing.Size(265, 45);
+            this.txbFindAccountName.TabIndex = 10;
+            this.txbFindAccountName.TextChanged += new System.EventHandler(this.txbFindAccountName_TextChanged);
+            // 
+            // btnFindAccount
+            // 
+            this.btnFindAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFindAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFindAccount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindAccount.ForeColor = System.Drawing.Color.White;
+            this.btnFindAccount.Location = new System.Drawing.Point(1079, 9);
+            this.btnFindAccount.Name = "btnFindAccount";
+            this.btnFindAccount.Size = new System.Drawing.Size(179, 45);
+            this.btnFindAccount.TabIndex = 9;
+            this.btnFindAccount.Text = "Tìm tài khoản";
+            this.btnFindAccount.Click += new System.EventHandler(this.btnFindAccount_Click);
+            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1329, 802);
+            this.ClientSize = new System.Drawing.Size(1300, 704);
             this.Controls.Add(this.tbFoodCategory);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fAdmin";
@@ -1330,45 +1290,23 @@
             this.panel32.ResumeLayout(false);
             this.tpAccount.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
+            this.guna2GroupBox1.ResumeLayout(false);
             this.panel30.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
             this.panel21.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).EndInit();
             this.tpTable.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).EndInit();
             this.tpFood.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picFood)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFoodDrink)).EndInit();
@@ -1401,25 +1339,11 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TabPage tpAccount;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbTypeAccount;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtDisplayName;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnResetPassword;
-        private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.Button btnShowAccount;
         private System.Windows.Forms.Button btnEditAccount;
         private System.Windows.Forms.Button btnDelAccount;
         private System.Windows.Forms.Button btnAddAccount;
@@ -1427,14 +1351,8 @@
         private System.Windows.Forms.DataGridView dtgvAccount;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txbCategoryID;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Button btnShowCategory;
         private System.Windows.Forms.Button btnEditCategory;
         private System.Windows.Forms.Button btnDelCategory;
         private System.Windows.Forms.Button btnAddCategory;
@@ -1442,17 +1360,10 @@
         private System.Windows.Forms.DataGridView dtgvCategory;
         private System.Windows.Forms.TabPage tpTable;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.ComboBox cbTableStatus;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtTableName;
-        private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtIDTable;
         private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Button btnShowTable;
         private System.Windows.Forms.Button btnEditTable;
         private System.Windows.Forms.Button btnDelTable;
         private System.Windows.Forms.Button btnAddTable;
@@ -1461,11 +1372,7 @@
         private System.Windows.Forms.TabPage tpFood;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox txbFindFoodName;
-        private System.Windows.Forms.Button btnFindFood;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnShowFoods;
         private System.Windows.Forms.Button btnEditFoods;
         private System.Windows.Forms.Button btnDelFood;
         private System.Windows.Forms.Button btnFoodAdd;
@@ -1480,7 +1387,22 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbFoodCategory;
         private Guna.UI2.WinForms.Guna2TextBox txbPrice;
         private Guna.UI2.WinForms.Guna2PictureBox picFood;
-        private Guna.UI2.WinForms.Guna2Button btnChooseFoodImage;
+        private Guna.UI2.WinForms.Guna2Button btnChooseFoodImage1;
         private System.Windows.Forms.OpenFileDialog ofdFoodImage;
+        private Guna.UI2.WinForms.Guna2TextBox txtIDTable;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTableStatus;
+        private Guna.UI2.WinForms.Guna2TextBox txtTableName;
+        private Guna.UI2.WinForms.Guna2TextBox txbCategoryID;
+        private Guna.UI2.WinForms.Guna2TextBox txtNameCate;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
+        private Guna.UI2.WinForms.Guna2TextBox txtDisplayName;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTypeAccount;
+        private Guna.UI2.WinForms.Guna2TextBox txbFindFoodName;
+        private Guna.UI2.WinForms.Guna2Button btnFindFood;
+        private Guna.UI2.WinForms.Guna2TextBox txbFindAccountName;
+        private Guna.UI2.WinForms.Guna2Button btnFindAccount;
     }
 }
