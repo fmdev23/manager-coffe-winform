@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLQuanCafe", "QLQuanCafe\QLQuanCafe.csproj", "{EEAEE593-5D1B-4AB6-A219-DE1683729E51}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CoffeStoreManager", "CoffeStoreManager\CoffeStoreManager.vdproj", "{F7A24291-721C-1274-F434-FBCD7E6D387B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{EEAEE593-5D1B-4AB6-A219-DE1683729E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEAEE593-5D1B-4AB6-A219-DE1683729E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEAEE593-5D1B-4AB6-A219-DE1683729E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7A24291-721C-1274-F434-FBCD7E6D387B}.Debug|Any CPU.ActiveCfg = Debug
+		{F7A24291-721C-1274-F434-FBCD7E6D387B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
