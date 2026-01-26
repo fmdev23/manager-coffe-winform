@@ -634,7 +634,7 @@ namespace QLQuanCafe
         private void btnShowTKDoanhThu_Click(object sender, EventArgs e) // XU LY THONG KE DOANH THU
         {
             DateTime dateFrom = dtpkIn.Value.Date;
-            DateTime dateTo = dtpkOut.Value.Date.AddDays(1).AddSeconds(-1); // 23:59:59 của ngày kết thúc
+            DateTime dateTo = dtpkOut.Value.Date.AddDays(1).AddSeconds(-1);
 
             if (dateFrom > dateTo)
             {
@@ -732,7 +732,6 @@ namespace QLQuanCafe
 
             dtgvFoodDrink.Columns["IDCategory"].Visible = false;
         }
-        
         private void txbFindFoodName_TextChanged(object sender, EventArgs e)
         {
             LoadFood(txbFindFoodName.Text.Trim());
@@ -1308,5 +1307,7 @@ namespace QLQuanCafe
                 ketNoi.Close();
             }
         }
+
+        
     }
 }

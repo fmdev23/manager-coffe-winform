@@ -22,10 +22,10 @@ namespace QLQuanCafe
         int originalQuantity = 0; // lưu số lượng món ban đầu khi chọn trong bill
         bool isEditingFood = false; // theo dõi trạng thái sửa món
 
-        public fTableManager(string userName)
+        public fTableManager(string userName) 
         {
             InitializeComponent();
-            currentUserName = userName;
+            currentUserName = userName; 
         }
 
         private void fTableManager_Load(object sender, EventArgs e) // load form
@@ -33,16 +33,19 @@ namespace QLQuanCafe
             LoadTable();
             LoadCategory();
 
-            lsvBill.Columns.Clear();
-            lsvBill.Columns.Add("Tên món", 150);
-            lsvBill.Columns.Add("Số lượng", 80);
-            lsvBill.Columns.Add("Đơn giá", 100);
-            lsvBill.Columns.Add("Thành tiền", 120);
-        }
-        void BtnTable_Guna_Click(object sender, EventArgs e) // sự kiện click nút bàn
-        {
-            var btn = sender as Guna2GradientButton; // nút bàn được click
+            //lsvBill.View = View.Details;
+            //lsvBill.FullRowSelect = true;
+            //lsvBill.GridLines = true;
 
+            lsvBill.Columns.Clear();
+            //lsvBill.Columns.Add("Tên món", 150);
+            //lsvBill.Columns.Add("Số lượng", 80);
+            //lsvBill.Columns.Add("Đơn giá", 100);
+            //lsvBill.Columns.Add("Thành tiền", 120);
+        }
+        void BtnTable_Guna_Click(object sender, EventArgs e)
+        {
+            var btn = sender as Guna2GradientButton;
             if (btn == null || btn.Tag == null) return;
 
             currentTableID = (int)btn.Tag;
@@ -52,7 +55,7 @@ namespace QLQuanCafe
                 b.BorderThickness = 0;
 
             btn.BorderThickness = 2;
-            btn.BorderColor = Color.DarkGray;
+            btn.BorderColor = Color.White;
 
             // kiểm tra bàn có bill hay không
             bool hasBill = CheckTableHasBill(currentTableID);
@@ -87,11 +90,7 @@ namespace QLQuanCafe
         {
             lsvBill.Items.Clear();
 
-            string query = @"SELECT f.foodName, bi.Quantity, f.foodPrice 
-                            FROM Bill b 
-                            JOIN BillInfo bi ON b.billID = bi.IDBill 
-                            JOIN Food f ON bi.IDFood = f.foodID 
-                            WHERE b.IDTable = @tableID AND b.billStatus = 1";
+            string query = @" SELECT f.foodName, bi.Quantity, f.foodPrice FROM Bill b JOIN BillInfo bi ON b.billID = bi.IDBill JOIN Food f ON bi.IDFood = f.foodID WHERE b.IDTable = @tableID AND b.billStatus = 1";
 
             using (SqlConnection connection = new SqlConnection(connection_string_sql))
             {
@@ -144,8 +143,7 @@ namespace QLQuanCafe
 
         int GetOrCreateBill(int tableID) // lấy bill hiện tại hoặc tạo mới nếu chưa có
         {
-            string query = @"SELECT billID FROM Bill 
-                            WHERE IDTable = @tableID AND billStatus = 1";
+            string query = @"SELECT billID FROM Bill WHERE IDTable = @tableID AND billStatus = 1";
 
             using (SqlConnection conn = new SqlConnection(connection_string_sql))
             {
@@ -155,13 +153,12 @@ namespace QLQuanCafe
 
                 object result = cmd.ExecuteScalar();
 
-                if (result != null) return (int)result;
+                if (result != null)
+                    return (int)result;
             }
 
             // chưa có bill → tạo mới
-            string insert = @"INSERT INTO Bill (IDTable, dateCheckIn, billStatus) 
-                            OUTPUT INSERTED.billID 
-                            VALUES (@tableID, GETDATE(), 1)";
+            string insert = @"INSERT INTO Bill (IDTable, dateCheckIn, billStatus) OUTPUT INSERTED.billID VALUES (@tableID, GETDATE(), 1)";
 
             using (SqlConnection conn = new SqlConnection(connection_string_sql))
             {
@@ -189,8 +186,7 @@ namespace QLQuanCafe
                 if (result != null)
                 {
                     // đã có → cộng thêm
-                    string update = @"UPDATE BillInfo SET Quantity = Quantity + @qty 
-                                    WHERE IDBill = @billID AND IDFood = @foodID";
+                    string update = @"UPDATE BillInfo SET Quantity = Quantity + @qty WHERE IDBill = @billID AND IDFood = @foodID";
 
                     SqlCommand up = new SqlCommand(update, conn);
                     up.Parameters.AddWithValue("@qty", quantity);
@@ -201,8 +197,7 @@ namespace QLQuanCafe
                 else
                 {
                     // chưa có → insert
-                    string insert = @"INSERT INTO BillInfo (IDBill, IDFood, Quantity) 
-                                    VALUES (@billID, @foodID, @qty)";
+                    string insert = @"INSERT INTO BillInfo (IDBill, IDFood, Quantity) VALUES (@billID, @foodID, @qty)";
 
                     SqlCommand ins = new SqlCommand(insert, conn);
                     ins.Parameters.AddWithValue("@billID", billID);
@@ -232,12 +227,7 @@ namespace QLQuanCafe
 
         void LoadEmptyTableToSwitch() // load bàn trống vào combobox chuyển bàn
         {
-            string query = @"SELECT ft.tableID, ft.tableName 
-                            FROM FoodTable ft 
-                            WHERE NOT EXISTS 
-                            (
-                                SELECT 1 FROM Bill b WHERE b.IDTable = ft.tableID AND b.billStatus = 1
-                            )";
+            string query = @" SELECT ft.tableID, ft.tableName FROM FoodTable ft WHERE NOT EXISTS (SELECT 1 FROM Bill b WHERE b.IDTable = ft.tableID AND b.billStatus = 1)";
 
             using (SqlConnection conn = new SqlConnection(connection_string_sql))
             {

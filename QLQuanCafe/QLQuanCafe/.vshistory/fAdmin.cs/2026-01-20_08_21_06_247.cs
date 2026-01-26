@@ -634,7 +634,7 @@ namespace QLQuanCafe
         private void btnShowTKDoanhThu_Click(object sender, EventArgs e) // XU LY THONG KE DOANH THU
         {
             DateTime dateFrom = dtpkIn.Value.Date;
-            DateTime dateTo = dtpkOut.Value.Date.AddDays(1).AddSeconds(-1); // 23:59:59 của ngày kết thúc
+            DateTime dateTo = dtpkOut.Value.Date.AddDays(1).AddSeconds(-1); // bao gồm cả ngày kết thúc
 
             if (dateFrom > dateTo)
             {

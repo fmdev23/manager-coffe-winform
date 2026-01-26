@@ -66,3 +66,4 @@ D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\bin\Debug\pt\Microsoft.ReportVie
 D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\NCTU\dotNET\QLQuanCafe\QLQuanCafe\QLQuanCafe\obj\Debug\QLQuanCafe.Form1.resources

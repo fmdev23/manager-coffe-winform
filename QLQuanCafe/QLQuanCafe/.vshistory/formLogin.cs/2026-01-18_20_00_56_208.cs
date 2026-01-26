@@ -38,7 +38,7 @@ namespace QLQuanCafe
             }
         }
 
-        string Login(string userName, string password) //trả về userName nếu đăng nhập thành công, ngược lại trả về null
+        string Login(string userName, string password)
         {
             string connection_string = connection_string_sql;
 
@@ -52,7 +52,7 @@ namespace QLQuanCafe
 
                 connection.Open();
                 object result = cmd.ExecuteScalar();
-                return result == null ? null : result.ToString(); //nếu result khác null thì trả về chuỗi userName
+                return result == null ? null : result.ToString(); 
             }
         }
 

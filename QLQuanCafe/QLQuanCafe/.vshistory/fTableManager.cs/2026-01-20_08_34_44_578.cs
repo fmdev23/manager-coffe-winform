@@ -39,7 +39,7 @@ namespace QLQuanCafe
             lsvBill.Columns.Add("Đơn giá", 100);
             lsvBill.Columns.Add("Thành tiền", 120);
         }
-        void BtnTable_Guna_Click(object sender, EventArgs e) // sự kiện click nút bàn
+        void BtnTable_Guna_Click(object sender, EventArgs e)
         {
             var btn = sender as Guna2GradientButton; // nút bàn được click
 

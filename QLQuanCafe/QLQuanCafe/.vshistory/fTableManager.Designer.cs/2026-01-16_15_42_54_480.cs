@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTableManager));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smnThongTinCaNhan = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmnDangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lsvBill = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -77,6 +77,14 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // adminToolStripMenuItem
+            // 
+            this.adminToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
+            this.adminToolStripMenuItem.Text = "Admin";
+            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
+            // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -101,19 +109,11 @@
             this.tsmnDangXuat.Text = "Đăng xuất";
             this.tsmnDangXuat.Click += new System.EventHandler(this.tsmnDangXuat_Click);
             // 
-            // adminToolStripMenuItem
-            // 
-            this.adminToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
-            this.adminToolStripMenuItem.Text = "Admin";
-            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lsvBill);
             this.panel2.Location = new System.Drawing.Point(596, 267);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(665, 332);
             this.panel2.TabIndex = 1;
@@ -121,16 +121,15 @@
             // lsvBill
             // 
             this.lsvBill.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsvBill.FullRowSelect = true;
             this.lsvBill.GridLines = true;
             this.lsvBill.HideSelection = false;
             this.lsvBill.Location = new System.Drawing.Point(4, 4);
-            this.lsvBill.Margin = new System.Windows.Forms.Padding(4);
+            this.lsvBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lsvBill.Name = "lsvBill";
             this.lsvBill.Size = new System.Drawing.Size(656, 324);
             this.lsvBill.TabIndex = 0;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
-            this.lsvBill.View = System.Windows.Forms.View.Details;
+            this.lsvBill.View = System.Windows.Forms.View.List;
             this.lsvBill.SelectedIndexChanged += new System.EventHandler(this.lsvBill_SelectedIndexChanged);
             // 
             // panel3
@@ -139,7 +138,7 @@
             this.panel3.Controls.Add(this.btnSwitchTable);
             this.panel3.Controls.Add(this.guna2GradientButton1);
             this.panel3.Location = new System.Drawing.Point(596, 607);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(665, 130);
             this.panel3.TabIndex = 2;
@@ -219,7 +218,7 @@
             this.panel4.Controls.Add(this.btnUpdateFood);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(596, 33);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(665, 226);
             this.panel4.TabIndex = 3;
@@ -267,7 +266,7 @@
             this.cbFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbFood.ItemHeight = 30;
             this.cbFood.Location = new System.Drawing.Point(179, 55);
-            this.cbFood.Margin = new System.Windows.Forms.Padding(4);
+            this.cbFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbFood.Name = "cbFood";
             this.cbFood.Size = new System.Drawing.Size(307, 36);
             this.cbFood.TabIndex = 14;
@@ -293,7 +292,7 @@
             this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCategory.ItemHeight = 30;
             this.cbCategory.Location = new System.Drawing.Point(179, 4);
-            this.cbCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(307, 36);
             this.cbCategory.TabIndex = 12;
@@ -371,7 +370,7 @@
             // 
             this.flpTable.AutoScroll = true;
             this.flpTable.Location = new System.Drawing.Point(13, 148);
-            this.flpTable.Margin = new System.Windows.Forms.Padding(4);
+            this.flpTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flpTable.Name = "flpTable";
             this.flpTable.Size = new System.Drawing.Size(575, 589);
             this.flpTable.TabIndex = 4;
@@ -431,7 +430,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin quán";
